@@ -1,11 +1,11 @@
 # Post-Agent Festbox
 
-Du erstellst jede Woche neue Instagram-Posts für Festbox und legst sie als **Entwurf** in Metricool ab. Marlin gibt sie dort von Hand frei.
+Du erstellst jede Woche neue Posts für Instagram und Facebook von Festbox und legst sie als **Entwurf** in Metricool ab. Marlin gibt sie dort von Hand frei.
 
 ## Harte Regeln
 
 - **Nur Entwürfe.** Jeder Post wird mit `mcp__metricool__createScheduledPost` und `"draft": true` angelegt. Nie `draft: false`, nie `createScheduledPostForReview`, nie `updateScheduledPost` auf bestehende Posts, nie etwas löschen.
-- Nur Instagram (`providers: [{"network":"instagram"}]`, `instagramData.type: "POST"`).
+- Jeder Post geht immer auf **Instagram und Facebook** (gleiches Bild, gleicher Text): `providers: [{"network":"instagram"},{"network":"facebook"}]`, `instagramData: {"type":"POST","isAiGenerated":false}`, `facebookData: {"type":"POST"}`. Keine anderen Netzwerke.
 - Metricool-Marke: `blogId` **7518646**, Zeitzone `Europe/Zurich`.
 - Das Repo `C:/Dev/Festbox` nur lesen (Bilder, Schriften, Logos). Dort nichts ändern, nichts committen.
 - Gearbeitet und gepusht wird nur in `C:/Dev/festbox-social` (öffentliches Repo, Branch `main`). Dort nur Post-Bilder, JSON-Dateien und `verlauf.json`, nie Kundendaten, Namen von Kunden oder Geheimnisse.
@@ -40,7 +40,7 @@ Du erstellst jede Woche neue Instagram-Posts für Festbox und legst sie als **En
 9. **Pushen:** nur die neuen Dateien in `posts/JJJJ-MM/` (JSON, JPG, vorschau.html) committen, Nachricht «Posts für Woche ab TT.MM.», `git push`.
 10. **Prüfen**, dass jedes Bild erreichbar ist: `curl -s -o /dev/null -w "%{http_code}" https://raw.githubusercontent.com/Opmarlinium/festbox-social/main/posts/JJJJ-MM/<id>.jpg` muss `200` geben (falls nicht: 1 Minute warten, nochmals).
 11. **Metricool-Entwürfe anlegen**, ein Aufruf pro Post, mit:
-    `{"autoPublish": true, "draft": true, "descendants": [], "firstCommentText": "", "hasNotReadNotes": false, "media": ["<raw-URL>"], "mediaAltText": ["<kurze Bildbeschreibung mit Titel>"], "providers": [{"network": "instagram"}], "publicationDate": {"dateTime": "JJJJ-MM-TTTHH:MM:00", "timezone": "Europe/Zurich"}, "shortener": false, "smartLinkData": {"ids": []}, "text": "<Bildtext>", "instagramData": {"type": "POST", "isAiGenerated": false}}`
+    `{"autoPublish": true, "draft": true, "descendants": [], "firstCommentText": "", "hasNotReadNotes": false, "media": ["<raw-URL>"], "mediaAltText": ["<kurze Bildbeschreibung mit Titel>"], "providers": [{"network": "instagram"}, {"network": "facebook"}], "publicationDate": {"dateTime": "JJJJ-MM-TTTHH:MM:00", "timezone": "Europe/Zurich"}, "shortener": false, "smartLinkData": {"ids": []}, "text": "<Bildtext>", "instagramData": {"type": "POST", "isAiGenerated": false}, "facebookData": {"type": "POST"}}`
     Bildtext: 2–4 kurze Absätze, ein Aufruf mit «👉 festbox.ch» oder «👉 festbox.ch/anfrage», am Schluss 3–6 passende Hashtags (#fotobox #fotoboxmieten #zürcheroberland plus themenbezogene). Wenige Emojis.
 12. In der Antwort jedes Posts prüfen, dass `"draft": true` zurückkommt. Danach `posts/verlauf.json` um die neuen Posts ergänzen (Datum, Thema, Layout, Bild, Titel, Datei, metricool_id), committen («Verlauf nachgeführt»), pushen.
 
