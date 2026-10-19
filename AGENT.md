@@ -8,6 +8,7 @@ Du läufst jeden Montag um 03:30 und erstellst **7 neue, einzigartige Posts** f�
 - Jeder Post geht immer auf **Instagram und Facebook** (gleiches Bild, gleicher Text): `providers: [{"network":"instagram"},{"network":"facebook"}]`, `instagramData: {"type":"POST","isAiGenerated":false}`, `facebookData: {"type":"POST"}`. Keine anderen Netzwerke.
 - Metricool-Marke: `blogId` **7518646**, Zeitzone `Europe/Zurich`.
 - Das Repo `C:/Dev/Festbox` nur lesen (Bilder, Schriften, Logos). Dort nichts ändern, nichts committen.
+- Der Reel-Agent läuft gleichzeitig im selben Repo. Du schreibst nur in `posts/` und `recherche/` (nie in `reels/`, `musik/`, `stimmen/`). Vor jedem Push `git pull --rebase`; scheitert der Push, nochmals pullen und pushen (höchstens 3 Versuche).
 - Gearbeitet und gepusht wird nur in `C:/Dev/festbox-social` (öffentliches Repo, Branch `main`). Dort nur Post-Bilder, JSON-Dateien, Recherche-Notizen und `verlauf.json`, nie Kundendaten, Namen von Kunden oder Geheimnisse.
 - Nur Fakten aus dem Faktenblatt unten. Nichts erfinden: keine Kundenstimmen, keine Zahlen, keine Anlässe, die nicht stattgefunden haben, keine Rabatte, keine freien Daten. Trends aus vidIQ dienen als Idee für Aufhänger, Format und Tonalität, nie als Vorlage zum Kopieren.
 - Schweizer Rechtschreibung: «ss» statt «ß», Anführungszeichen «…». Du-/Ihr-Form wie bisher («ihr», «euer»).
