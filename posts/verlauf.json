@@ -1,9 +1,9 @@
 {
   "posts": [
-    {"datum": "2026-10-20", "thema": "Stimmung", "layout": "foto", "bild": "gruppe-jubel.webp", "titel": "Hemmungen bleiben draussen.", "datei": "posts/2026-10/post-1.jpg", "metricool_id": 400248275},
-    {"datum": "2026-10-22", "thema": "Ablauf", "layout": "schritte", "bild": null, "titel": "In drei Schritten zur Fotobox.", "datei": "posts/2026-10/post-4.jpg", "metricool_id": 400250160},
-    {"datum": "2026-10-24", "thema": "Hochzeit", "layout": "panel", "bild": "hochzeit-sofortbilder-leiter.webp", "titel": "Das Gästebuch, das alle ausfüllen.", "datei": "posts/2026-10/post-2.jpg", "metricool_id": 400250203},
-    {"datum": "2026-10-27", "thema": "Pakete", "layout": "liste", "bild": null, "titel": "Drei Pakete. Ein Fest.", "datei": "posts/2026-10/post-5.jpg", "metricool_id": 400248945},
-    {"datum": "2026-10-29", "thema": "Firmenfest", "layout": "foto", "bild": "firmenfeier-anstossen.webp", "titel": "Das Teamfoto, auf dem alle lachen.", "datei": "posts/2026-10/post-3.jpg", "metricool_id": 400248955}
+    {"datum": "2026-10-20", "thema": "Stimmung", "layout": "foto", "bild": "gruppe-jubel.webp", "titel": "Hemmungen bleiben draussen.", "datei": "posts/2026-10/post-1.jpg", "metricool_id": 400271062},
+    {"datum": "2026-10-22", "thema": "Ablauf", "layout": "schritte", "bild": null, "titel": "In drei Schritten zur Fotobox.", "datei": "posts/2026-10/post-4.jpg", "metricool_id": 400271350},
+    {"datum": "2026-10-24", "thema": "Hochzeit", "layout": "panel", "bild": "hochzeit-sofortbilder-leiter.webp", "titel": "Das Gästebuch, das alle ausfüllen.", "datei": "posts/2026-10/post-2.jpg", "metricool_id": 400271353},
+    {"datum": "2026-10-27", "thema": "Pakete", "layout": "liste", "bild": null, "titel": "Drei Pakete. Ein Fest.", "datei": "posts/2026-10/post-5.jpg", "metricool_id": 400271356},
+    {"datum": "2026-10-29", "thema": "Firmenfest", "layout": "foto", "bild": "firmenfeier-anstossen.webp", "titel": "Das Teamfoto, auf dem alle lachen.", "datei": "posts/2026-10/post-3.jpg", "metricool_id": 400271362}
   ]
 }
