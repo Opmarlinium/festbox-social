@@ -1,4 +1,23 @@
 {
   "monatslimit": 80,
-  "eintraege": []
+  "eintraege": [
+    {
+      "datum": "2026-10-19",
+      "werkzeug": "vidiq_instagram_tiktok_outlier_search",
+      "credits": 5,
+      "zweck": "Test-Reel Preis, Recherche"
+    },
+    {
+      "datum": "2026-10-19",
+      "werkzeug": "vidiq_voiceover_generate",
+      "credits": 14,
+      "zweck": "Stimme Sarah, Test-Reel Preis"
+    },
+    {
+      "datum": "2026-10-19",
+      "werkzeug": "vidiq_generate_music",
+      "credits": 25,
+      "zweck": "musik/party-upbeat-122bpm.mp3"
+    }
+  ]
 }
