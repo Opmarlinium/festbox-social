@@ -1,9 +1,70 @@
 {
   "posts": [
-    {"datum": "2026-10-20", "thema": "Stimmung", "layout": "foto", "bild": "gruppe-jubel.webp", "titel": "Hemmungen bleiben draussen.", "datei": "posts/2026-10/post-1.jpg", "metricool_id": 400271062},
-    {"datum": "2026-10-22", "thema": "Ablauf", "layout": "schritte", "bild": null, "titel": "In drei Schritten zur Fotobox.", "datei": "posts/2026-10/post-4.jpg", "metricool_id": 400271350},
-    {"datum": "2026-10-24", "thema": "Hochzeit", "layout": "panel", "bild": "hochzeit-sofortbilder-leiter.webp", "titel": "Das Gästebuch, das alle ausfüllen.", "datei": "posts/2026-10/post-2.jpg", "metricool_id": 400271353},
-    {"datum": "2026-10-27", "thema": "Pakete", "layout": "liste", "bild": null, "titel": "Drei Pakete. Ein Fest.", "datei": "posts/2026-10/post-5.jpg", "metricool_id": 400271356},
-    {"datum": "2026-10-29", "thema": "Firmenfest", "layout": "foto", "bild": "firmenfeier-anstossen.webp", "titel": "Das Teamfoto, auf dem alle lachen.", "datei": "posts/2026-10/post-3.jpg", "metricool_id": 400271362}
+    {
+      "datum": "2026-10-20",
+      "thema": "Stimmung",
+      "layout": "foto",
+      "bild": "gruppe-jubel.webp",
+      "titel": "Hemmungen bleiben draussen.",
+      "datei": "posts/2026-10/post-1.jpg",
+      "metricool_id": 400271062
+    },
+    {
+      "datum": "2026-10-22",
+      "thema": "Ablauf",
+      "layout": "schritte",
+      "bild": null,
+      "titel": "In drei Schritten zur Fotobox.",
+      "datei": "posts/2026-10/post-4.jpg",
+      "metricool_id": 400271350
+    },
+    {
+      "datum": "2026-10-24",
+      "thema": "Hochzeit",
+      "layout": "panel",
+      "bild": "hochzeit-sofortbilder-leiter.webp",
+      "titel": "Das Gästebuch, das alle ausfüllen.",
+      "datei": "posts/2026-10/post-2.jpg",
+      "metricool_id": 400271353
+    },
+    {
+      "datum": "2026-10-27",
+      "thema": "Pakete",
+      "layout": "liste",
+      "bild": null,
+      "titel": "Drei Pakete. Ein Fest.",
+      "datei": "posts/2026-10/post-5.jpg",
+      "metricool_id": 400271356
+    },
+    {
+      "datum": "2026-10-29",
+      "thema": "Firmenfest",
+      "layout": "foto",
+      "bild": "firmenfeier-anstossen.webp",
+      "titel": "Das Teamfoto, auf dem alle lachen.",
+      "datei": "posts/2026-10/post-3.jpg",
+      "metricool_id": 400271362
+    },
+    {
+      "format": "reel",
+      "datum": "2026-10-23",
+      "zeit": "19:30",
+      "thema": "Pakete",
+      "format_typ": "Preis transparent",
+      "aufhaenger": "Ihr dachtet, eine Fotobox ist zu teuer?",
+      "titel": "Ihr dachtet, eine Fotobox ist zu teuer?",
+      "material": [
+        "gruppe-jubel.webp",
+        "fotobox-festbox-stativ-softbox-1440.webp",
+        "freundinnen-partyhuete.webp",
+        "fotostreifen-hand.webp",
+        "jga-konfetti.webp"
+      ],
+      "musik": "musik/party-upbeat-122bpm.mp3",
+      "stimme": "stimmen/2026-10-preis-sarah.mp3",
+      "trend_sound": null,
+      "datei": "reels/2026-10/2026-10-test-preis.mp4",
+      "metricool_id": 400290927
+    }
   ]
 }
