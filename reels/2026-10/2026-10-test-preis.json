@@ -1,0 +1,22 @@
+{
+  "id": "2026-10-test-preis",
+  "format": "Preis transparent",
+  "musik": "../../musik/party-upbeat-122bpm.mp3",
+  "stimme": "../../stimmen/2026-10-preis-sarah.mp3",
+  "stimme_start": 0.2,
+  "musik_db": -17,
+  "logo": true,
+  "szenen": [
+    {"bild": "gruppe-jubel.webp", "dauer": 2.6, "bewegung": "zoom-in",
+     "oben": "Ihr dachtet, eine Fotobox ist *zu teuer?*"},
+    {"bild": "fotobox-festbox-stativ-softbox-1440.webp", "dauer": 3.5, "bewegung": "zoom-out",
+     "marke": "Paket S", "gross": "CHF 349", "klein": "Selbstabholung"},
+    {"bild": "freundinnen-partyhuete.webp", "dauer": 3.7, "bewegung": "pan-rechts",
+     "marke": "Paket M · am beliebtesten", "gross": "CHF 590", "klein": "Wir liefern und holen wieder ab"},
+    {"bild": "fotostreifen-hand.webp", "dauer": 4.4, "bewegung": "zoom-in",
+     "marke": "Immer dabei", "klein": "✓ Unlimitierte Fotos\n✓ Per QR-Code aufs Handy\n✓ Online-Galerie in 48 h"},
+    {"bild": "jga-konfetti.webp", "dauer": 2.2, "bewegung": "zoom-out",
+     "oben": "Welches Paket nehmt *ihr?*", "unten": "👉 festbox.ch/anfrage"}
+  ],
+  "bildtext": "Ihr dachtet, eine Fotobox sprengt das Budget? 👀\n\nPaket S: CHF 349 zum Selbstabholen.\nPaket M: CHF 590, wir liefern und holen wieder ab.\nPaket L mit Betreuung: auf Offerte.\n\nImmer dabei: unlimitierte Fotos, QR-Download und Online-Galerie innert 48 h. Anfahrt bis 20 km inklusive.\n\nWelches Paket wär's bei euch? Schreibt's in die Kommentare 👇\n👉 festbox.ch/anfrage\n\n#fotobox #fotoboxmieten #photobooth #zürcheroberland #zürich #hochzeitschweiz"
+}
