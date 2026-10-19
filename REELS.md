@@ -77,13 +77,23 @@ Jedes Reel hat Ton. Viele schauen ohne Ton, darum steht alles Wichtige zusätzli
 - Reaktionen der Gäste (nur eigene, freigegebene Clips)
 - Trend-Format aus der vidIQ-Recherche, auf Festbox übertragen
 
+## Werkzeug
+
+Für Reels aus **Fotos** gibt es `werkzeug/reel.py`. Es baut aus einer JSON-Datei das fertige MP4 samt Titelbild (Bewegung, Text-Einblendungen im Festbox-Stil, Stimme, Musik, Abmischung auf −14 LUFS):
+
+`C:/Dev/Festbox/tools/bildwerkstatt/.venv/Scripts/python.exe -I werkzeug/reel.py reels/JJJJ-MM/<id>.json`
+
+Vorlage: `reels/2026-10/2026-10-test-preis.json` (von Marlin abgenommen). Felder siehe `werkzeug/README.md`, Abschnitt «Reels».
+- **Szenen an die Stimme anpassen:** Nach dem Erzeugen der Stimme die Pausen messen (`ffmpeg -i stimme.mp3 -af silencedetect=noise=-35dB:d=0.25 -f null -`) und die Szenenlängen so wählen, dass jeder Szenenwechsel in eine Sprechpause fällt (plus `stimme_start`). Die Stimme Sarah spricht rund 13 Zeichen pro Sekunde.
+- Für **eigene Clips** und **Motion Graphics** kann `reel.py` noch nichts. Solche Szenen mit den ffmpeg-Befehlen aus Schritt 5 und 6 bauen und das Werkzeug dafür erweitern (Feld `clip` statt `bild`), dann erst verwenden, wenn ein Testlauf sauber ist.
+
 ## Ablauf pro Lauf
 
 1. `cd C:/Dev/festbox-social && git pull`. `posts/verlauf.json`, `reels/credits.json`, `musik/README.md` und die letzten Notizen in `recherche/` lesen. In `C:/Dev/Festbox-Clips/freigegeben/` nach neuen Clips schauen.
 2. **Recherche** (höchstens 15 Credits): 1–2 Aufrufe `vidiq_instagram_tiktok_outlier_search` zu den Reel-Themen (gleiches `audienceQuery` wie in `AGENT.md`, `embeddingType` `hook` oder `format`, `durationMax` 30). Für das vielversprechendste Beispiel optional `vidiq_watch_shortform_content` (10 Credits) für den Ablauf Szene für Szene, aber nur, wenn das Guthaben über 60 liegt. Festhalten in `recherche/JJJJ-MM-TT-reels.md`: Aufhänger, Aufbau, Länge, Schnitt-Tempo, verwendete Sounds.
 3. **Plan pro Reel** in `reels/JJJJ-MM/<id>.json`: Format, Aufhänger, Szenenliste mit Sekunden (Material, Text im Bild, Bewegung), Sprechertext, Musik (Trend-Sound-Kandidaten und Bibliotheks-Track), Bildtext, Hashtags, Postzeit. Der Titel und die Kernaussage dürfen nicht schon im Verlauf stehen.
 4. **Ton bauen:** Stimme erzeugen (falls geplant), mit `vidiq_job_poll` abwarten, MP3 nach `stimmen/` laden. Musik aus `musik/` wählen, nur wenn nötig einen neuen Track erzeugen.
-5. **Bildteile bauen:**
+5. **Bildteile bauen** (bei reinen Foto-Reels erledigt das `reel.py`, dann direkt weiter mit 7):
    - Text-Einblendungen und Untertitel als transparente PNGs (1080 × 1920) mit den Festbox-Schriften (Sora 700 für Titel, Figtree für Untertitel aus `C:/Dev/Festbox/public/assets/fonts/`). Am einfachsten wie in `werkzeug/render.py` als HTML mit Playwright rendern (`omit_background=True`).
    - Fotos bewegen: `ffmpeg -loop 1 -i foto.jpg -vf "scale=2160:-2,zoompan=z='min(zoom+0.0012,1.15)':d=<frames>:s=1080x1920:fps=30" -t <sek> szene.mp4`
    - Clips zuschneiden und ins Hochformat bringen: `ffmpeg -ss <start> -t <dauer> -i clip.mp4 -vf "scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,fps=30" -an szene.mp4`

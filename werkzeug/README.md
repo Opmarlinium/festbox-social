@@ -26,3 +26,16 @@ C:/Dev/Festbox/tools/bildwerkstatt/.venv/Scripts/python.exe -I werkzeug/render.p
 | `zitat` | Frage oder Spruch auf Gelb, kleines Foto unten rechts | `bild` (optional), `bildposition` |
 
 Längen als Richtwert: Titel bis ca. 40 Zeichen (`foto`, `panel`), Untertitel bis ca. 110 Zeichen, bei `schritte` pro Punkt-Text bis ca. 70 Zeichen.
+
+## Reels (`reel.py`)
+
+```
+C:/Dev/Festbox/tools/bildwerkstatt/.venv/Scripts/python.exe -I werkzeug/reel.py reels/2026-10/<id>.json
+```
+
+Oberste Felder: `id`, `musik` und `stimme` (Pfade relativ zur JSON-Datei, beide optional), `stimme_start` (Sekunden, Standard 0.2), `musik_db` (Standard −18 mit Stimme, −4 ohne), `stimme_db`, `logo` (true: kleines Logo ab Szene 2), `szenen`.
+
+Pro Szene: `bild` (aus `C:/Dev/Festbox/public/assets/images/`), `dauer` (Sekunden), `bewegung` (`zoom-in`, `zoom-out`, `pan-links`, `pan-rechts`) und Text: `oben` (Aufhänger oben), `marke` (gelbes Schild), `gross` (grosse gelbe Zahl oder Wort), `klein` (Zeilen darunter, `
+` für neue Zeile), `unten` (z. B. Link). `*Wort*` hebt gelb hervor.
+
+Ausgabe: `<id>.mp4` (1080 × 1920, 30 fps, H.264, AAC, −14 LUFS) und `<id>-cover.jpg`. Zwischendateien in `_arbeit/` (wird nicht committet).
