@@ -1,0 +1,56 @@
+{
+  "posts": [
+    {
+      "id": "beispiel-foto",
+      "layout": "foto",
+      "bild": "gruppe-jubel.webp",
+      "bildposition": "50% 40%",
+      "tag": "Unlimitierte Fotos",
+      "titel": "Hemmungen bleiben\n*draussen.*",
+      "text": "Spätestens beim dritten Foto steht die halbe Party vor der Box.",
+      "fuss": ["festbox.ch", "Zürcher Oberland"]
+    },
+    {
+      "id": "beispiel-panel",
+      "layout": "panel",
+      "bild": "hochzeit-sofortbilder-leiter.webp",
+      "bildposition": "50% 45%",
+      "polaroid": "hochzeit-gruppe.webp",
+      "polaroid_text": "Für immer 💛",
+      "tag": "Hochzeit",
+      "titel": "Das Gästebuch, das alle ausfüllen.",
+      "text": "Foto machen, Streifen einkleben, ein paar Worte dazu. Gästebuch als Zusatz für CHF 59.",
+      "fuss": ["festbox.ch", "Offerte innert 24 h"]
+    },
+    {
+      "id": "beispiel-schritte",
+      "layout": "schritte",
+      "titel": "In drei Schritten zur Fotobox.",
+      "schritte": [
+        {"titel": "Datum anfragen", "text": "Paket wählen auf festbox.ch/anfrage. Dauert zwei Minuten."},
+        {"titel": "Offerte innert 24 h", "text": "Bezahlt wird erst, wenn ihr die Offerte annehmt."},
+        {"titel": "Feiern", "text": "Box steht, Fotos fliegen. Online-Galerie innert 48 Stunden."}
+      ]
+    },
+    {
+      "id": "beispiel-liste",
+      "layout": "liste",
+      "titel": "Drei Pakete.\n*Ein Fest.*",
+      "zeilen": [
+        {"kurz": "S", "titel": "Selbstabholung", "text": "Abholen, aufstellen, selber feiern", "wert": "349", "einheit": "CHF"},
+        {"kurz": "M", "titel": "Lieferung", "text": "Wir liefern und holen wieder ab · am beliebtesten", "wert": "590", "einheit": "CHF", "hervorheben": true},
+        {"kurz": "L", "titel": "Mit Betreuung", "text": "Jemand von uns ist den ganzen Abend dabei", "wert": "Offerte", "einheit": "auf Anfrage"}
+      ],
+      "text": "Immer dabei: unlimitierte digitale Fotos, QR-Download, Online-Galerie, euer eigenes Foto-Layout.",
+      "fuss": ["festbox.ch/anfrage", "Anfahrt bis 20 km inklusive"]
+    },
+    {
+      "id": "beispiel-zitat",
+      "layout": "zitat",
+      "titel": "Wer hat eigentlich die *Polizeimütze* mitgebracht?",
+      "text": "Requisiten gibt's ab CHF 39 dazu. Die besten Fotos entstehen sowieso, wenn keiner ernst bleibt.",
+      "bild": "freundinnen-polizeimuetze.webp",
+      "fuss": ["festbox.ch", "Zürcher Oberland"]
+    }
+  ]
+}

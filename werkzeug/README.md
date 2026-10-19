@@ -1,0 +1,28 @@
+# Render-Werkzeug
+
+`render.py` macht aus einer JSON-Datei fertige Post-Bilder (1080 × 1350, JPG) im Festbox-Stil.
+Schriften, Logos und Fotos kommen aus `C:/Dev/Festbox` (nur lesen).
+
+```
+C:/Dev/Festbox/tools/bildwerkstatt/.venv/Scripts/python.exe -I werkzeug/render.py posts/2026-11/2026-11-02.json
+```
+
+## Felder für alle Layouts
+
+- `id`: Dateiname ohne Endung, nur Kleinbuchstaben, Zahlen und Bindestriche.
+- `layout`: `foto`, `panel`, `schritte`, `liste` oder `zitat`.
+- `titel`: Überschrift. `*Wort*` hebt hervor (gelb auf Foto/Dunkel, unterstrichen auf Gelb). `\n` erzwingt einen Zeilenumbruch.
+- `text`: Untertitel (optional).
+- `fuss`: zwei Texte unten links und rechts, Standard `["festbox.ch", "Zürcher Oberland"]`.
+
+## Layouts
+
+| Layout | Wofür | Eigene Felder |
+|---|---|---|
+| `foto` | Stimmung, Anlässe: Foto über die ganze Fläche, Text unten | `bild`, `bildposition` (CSS, z. B. `"50% 30%"`), `tag` |
+| `panel` | Foto oben, gelbes Feld unten | `bild`, `bildposition`, `tag`, optional `polaroid` (2. Bild) und `polaroid_text` |
+| `schritte` | Ablauf, Tipps, Checklisten: Gelb mit 3 nummerierten Punkten | `schritte`: Liste mit `titel` und `text` |
+| `liste` | Pakete, Zusätze, Vergleiche: Dunkel mit Zeilen | `zeilen`: Liste mit `kurz`, `titel`, `text`, `wert`, `einheit`, `hervorheben` |
+| `zitat` | Frage oder Spruch auf Gelb, kleines Foto unten rechts | `bild` (optional), `bildposition` |
+
+Längen als Richtwert: Titel bis ca. 40 Zeichen (`foto`, `panel`), Untertitel bis ca. 110 Zeichen, bei `schritte` pro Punkt-Text bis ca. 70 Zeichen.
