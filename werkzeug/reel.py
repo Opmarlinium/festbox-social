@@ -101,20 +101,33 @@ def main():
             pg.screenshot(path=str(arbeit / f"o{i}.png"), omit_background=True)
         b.close()
 
-    # 2) Szenen: Foto bewegen + Einblendung darüber
+    # 2) Szenen: Foto bewegen oder Clip zuschneiden, Einblendung darüber
     teile = []
     for i, sz in enumerate(szenen):
-        bild = BILDER / sz["bild"]
-        if not bild.exists():
-            raise SystemExit(f"Bild fehlt: {bild}")
         n = round(sz["dauer"] * FPS)
         out = arbeit / f"s{i}.mp4"
-        vf = (f"[0:v]scale=2160:3840:force_original_aspect_ratio=increase,crop=2160:3840,"
-              f"zoompan={bewegung(sz.get('bewegung', 'zoom-in'), n)}:d={n}:s={W}x{H}:fps={FPS},setsar=1[bg];"
-              f"[bg][1:v]overlay=0:0,format=yuv420p[v]")
-        run(["ffmpeg", "-y", "-loop", "1", "-i", str(bild), "-i", str(arbeit / f"o{i}.png"),
-             "-filter_complex", vf, "-map", "[v]", "-frames:v", str(n), "-r", str(FPS),
-             "-c:v", "libx264", "-preset", "medium", "-crf", "18", str(out)])
+        if sz.get("clip"):
+            # Video-Clip: Pfad relativ zur JSON-Datei oder absolut; Ton des Clips wird verworfen
+            clip = (ordner / sz["clip"]).resolve()
+            if not clip.exists():
+                raise SystemExit(f"Clip fehlt: {clip}")
+            tempo = sz.get("tempo", 1.0)  # 0.5 = Zeitlupe, 2 = doppelt so schnell
+            vf = (f"[0:v]setpts=PTS/{tempo},scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},"
+                  f"fps={FPS},setsar=1,tpad=stop_mode=clone:stop_duration={sz['dauer']}[bg];"
+                  f"[bg][1:v]overlay=0:0,format=yuv420p[v]")
+            run(["ffmpeg", "-y", "-ss", str(sz.get("start", 0)), "-i", str(clip), "-i", str(arbeit / f"o{i}.png"),
+                 "-filter_complex", vf, "-map", "[v]", "-frames:v", str(n), "-an",
+                 "-c:v", "libx264", "-preset", "medium", "-crf", "18", str(out)])
+        else:
+            bild = BILDER / sz["bild"]
+            if not bild.exists():
+                raise SystemExit(f"Bild fehlt: {bild}")
+            vf = (f"[0:v]scale=2160:3840:force_original_aspect_ratio=increase,crop=2160:3840,"
+                  f"zoompan={bewegung(sz.get('bewegung', 'zoom-in'), n)}:d={n}:s={W}x{H}:fps={FPS},setsar=1[bg];"
+                  f"[bg][1:v]overlay=0:0,format=yuv420p[v]")
+            run(["ffmpeg", "-y", "-loop", "1", "-i", str(bild), "-i", str(arbeit / f"o{i}.png"),
+                 "-filter_complex", vf, "-map", "[v]", "-frames:v", str(n), "-r", str(FPS),
+                 "-c:v", "libx264", "-preset", "medium", "-crf", "18", str(out)])
         teile.append(out)
 
     # 3) Szenen aneinanderhängen (harte Schnitte im Takt)

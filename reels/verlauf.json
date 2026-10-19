@@ -1,0 +1,25 @@
+{
+  "reels": [
+    {
+      "format": "reel",
+      "datum": "2026-10-23",
+      "zeit": "19:30",
+      "thema": "Pakete",
+      "format_typ": "Preis transparent",
+      "aufhaenger": "Ihr dachtet, eine Fotobox ist zu teuer?",
+      "titel": "Ihr dachtet, eine Fotobox ist zu teuer?",
+      "material": [
+        "gruppe-jubel.webp",
+        "fotobox-festbox-stativ-softbox-1440.webp",
+        "freundinnen-partyhuete.webp",
+        "fotostreifen-hand.webp",
+        "jga-konfetti.webp"
+      ],
+      "musik": "musik/party-upbeat-122bpm.mp3",
+      "stimme": "stimmen/2026-10-preis-sarah.mp3",
+      "trend_sound": null,
+      "datei": "reels/2026-10/2026-10-test-preis.mp4",
+      "metricool_id": 400290927
+    }
+  ]
+}

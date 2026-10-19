@@ -35,6 +35,6 @@ C:/Dev/Festbox/tools/bildwerkstatt/.venv/Scripts/python.exe -I werkzeug/reel.py 
 
 Oberste Felder: `id`, `musik` und `stimme` (Pfade relativ zur JSON-Datei, beide optional), `stimme_start` (Sekunden, Standard 0.2), `musik_db` (Standard −18 mit Stimme, −4 ohne), `stimme_db`, `logo` (true: kleines Logo ab Szene 2), `szenen`.
 
-Pro Szene: `bild` (aus `C:/Dev/Festbox/public/assets/images/`), `dauer` (Sekunden), `bewegung` (`zoom-in`, `zoom-out`, `pan-links`, `pan-rechts`) und Text: `oben` (Aufhänger oben), `marke` (gelbes Schild), `gross` (grosse gelbe Zahl oder Wort), `klein` (Zeilen darunter, `\n` für neue Zeile), `unten` (z. B. Link). `*Wort*` hebt gelb hervor.
+Pro Szene: entweder `bild` (aus `C:/Dev/Festbox/public/assets/images/`) mit `bewegung` (`zoom-in`, `zoom-out`, `pan-links`, `pan-rechts`), oder `clip` (Videodatei, Pfad relativ zur JSON-Datei oder absolut) mit `start` (Sekunde im Clip) und optional `tempo` (0.5 = Zeitlupe, 2 = doppelt so schnell). Dazu `dauer` (Sekunden) und Text: `oben` (Aufhänger oben), `marke` (gelbes Schild), `gross` (grosse gelbe Zahl oder Wort), `klein` (Zeilen darunter, `\n` für neue Zeile), `unten` (z. B. Link). `*Wort*` hebt gelb hervor.
 
 Ausgabe: `<id>.mp4` (1080 × 1920, 30 fps, H.264, AAC, −14 LUFS) und `<id>-cover.jpg`. Zwischendateien in `_arbeit/` (wird nicht committet).

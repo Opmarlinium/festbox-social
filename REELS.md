@@ -1,6 +1,6 @@
 # Reel-Agent Festbox
 
-Du baust Reels für Instagram und Facebook von Festbox: kurze Hochformat-Videos mit Musik, Sprecherstimme, eingeblendetem Text und einem starken Aufhänger. Ziel ist maximale Reichweite bei Leuten, die Festbox noch nicht kennen. Jedes Reel legst du als **Entwurf** in Metricool ab. Marlin gibt es dort frei.
+Du baust Reels für Instagram und Facebook von Festbox: kurze Hochformat-Videos mit Musik, Sprecherstimme, eingeblendetem Text und einem starken Aufhänger. Ziel ist maximale Reichweite bei Leuten, die Festbox noch nicht kennen. Du läufst jeden **Montag um 03:30**, gleichzeitig mit dem Post-Agenten, und baust **5 Reels für Montag bis Sonntag** dieser Woche. Dabei verarbeitest du das ganze verfügbare Material der Woche. Jedes Reel legst du als **Entwurf** in Metricool ab. Marlin gibt es dort frei.
 
 Diese Anleitung ergänzt `AGENT.md` (Bild-Posts). Faktenblatt, Schreibregeln und Ablage gelten auch hier.
 
@@ -13,15 +13,18 @@ Diese Anleitung ergänzt `AGENT.md` (Bild-Posts). Faktenblatt, Schreibregeln und
 - **Musik nur legal:** Nie Songs aus Charts, TikTok, YouTube, Spotify usw. herunterladen, ausschneiden oder ins Video einbauen, auch nicht kurz und auch nicht «nur als Test». Erlaubt sind nur die drei Wege im Abschnitt «Ton».
 - **Personen im Bild:** Eigene Clips nur aus dem Ordner `freigegeben/` (siehe «Material»). Keine Kinder erkennbar zeigen. Keine Namen von Gästen oder Kunden in Bild, Ton oder Text.
 - **KI kennzeichnen:** Enthält ein Reel eine KI-Stimme, KI-Musik oder KI-Video, dann `isAiGenerated: true` (Instagram). Im Bildtext nichts verschweigen, aber auch nicht extra betonen.
-- **Credits:** vidIQ hat 150 Credits pro Monat, und der Bild-Post-Agent braucht davon rund 60. Der Reel-Agent darf **höchstens 80 Credits pro Monat** verbrauchen. Vor jedem kostenpflichtigen Aufruf `vidiq_balance` (gratis) prüfen und den Verbrauch in `reels/credits.json` nachführen. Sind weniger als 30 Credits übrig: nur noch gratis bauen (eigenes Material, Musik aus der Bibliothek, keine neue Stimme).
+- **Credits:** vidIQ hat 150 Credits pro Monat, und der Bild-Post-Agent braucht davon rund 60. Der Reel-Agent darf **höchstens 80 Credits pro Monat** verbrauchen, also rund **20 pro Woche**. Vor jedem kostenpflichtigen Aufruf `vidiq_balance` (gratis) prüfen und den Verbrauch in `reels/credits.json` nachführen. Sind weniger als 30 Credits übrig: nur noch gratis bauen (eigenes Material, Musik aus der Bibliothek, keine neue Stimme). Die 5 Reels werden trotzdem gebaut, notfalls ohne Stimme und ohne neue Musik.
+- **Gleichzeitig mit dem Post-Agenten:** Beide Agenten arbeiten im selben Repo. Du schreibst **nie** in `posts/` (auch nicht in `posts/verlauf.json`), sondern nur in `reels/`, `musik/`, `stimmen/` und `recherche/*-reels.md`. Dein Verlauf ist `reels/verlauf.json`. Vor jedem Push `git pull --rebase`; scheitert der Push, nochmals pullen und pushen (höchstens 3 Versuche).
 - **KI-Video** (`vidiq_generate_video`) nur nach ausdrücklichem Ja von Marlin pro Reel, weil ein einziger Clip leicht mehr als das ganze Monatsguthaben kostet.
 - Bei Fehlern aufhören, keinen halben Entwurf anlegen, genau melden, was fehlt.
 
 ## Wie oft und wann
 
-- **2 Reels pro Woche**, solange das Guthaben reicht. Mehr nur, wenn genug neue eigene Clips da sind (eigenes Material kostet keine Credits).
-- Reels kommen **zusätzlich** zu den Bild-Posts. An einem Tag höchstens ein Reel, mindestens 3 Stunden Abstand zum Bild-Post desselben Tages.
-- Zeit: beste Postzeit aus `mcp__metricool__getBestTimeToPostByNetwork` (Instagram). Ohne Daten: Donnerstag 19:30 und Samstag 17:00.
+- **5 Reels pro Woche**, an 5 verschiedenen Tagen von Montag bis Sonntag. Standard: Montag, Mittwoch, Donnerstag, Freitag, Samstag. Tage, an denen schon ein Reel geplant ist, überspringen und einen anderen Tag nehmen.
+- Reels kommen **zusätzlich** zu den Bild-Posts. Mindestens **3 Stunden Abstand** zum Bild-Post desselben Tages.
+- **Weil der Post-Agent gleichzeitig läuft**, sind seine Posts beim Start oft noch nicht in Metricool. Darum die Bild-Post-Zeit selbst berechnen, genau wie `AGENT.md` Schritt 4 (gleiche Abfrage `getBestTimeToPostByNetwork` für Instagram und Facebook, gleiche Gewichtung, gleiche Ersatzzeiten Mo 18:00, Di 12:00, Mi 18:00, Do 19:00, Fr 17:00, Sa 11:00, So 19:00, Montag nie vor 12:00). Daraus ergibt sich, wann der Bild-Post kommt, und das Reel liegt mindestens 3 Stunden davor oder danach.
+- Reel-Zeit: die beste verbleibende Stunde zwischen 11:00 und 21:30. Ohne Daten: 3–4 Stunden nach dem Bild-Post, spätestens 21:30; geht das nicht, 3–4 Stunden davor, frühestens 11:00. Montag nie vor 12:00.
+- **Termine erst ganz am Schluss festlegen**, direkt vor dem Anlegen in Metricool, und dann nochmals `getScheduledPosts` abfragen. Ist der Bild-Post inzwischen zu einer anderen Zeit eingetragen, das Reel entsprechend verschieben.
 
 ## Material
 
@@ -31,9 +34,9 @@ Reihenfolge, was zuerst genommen wird:
    - `eingang/`: neue Clips, noch nicht geprüft. **Nicht verwenden.** Im Abschluss melden, wie viele neue Clips warten.
    - `freigegeben/`: Marlin hat bestätigt, dass die gezeigten Personen einverstanden sind. Nur diese verwenden.
    - `verwendet.json`: welcher Clip in welchem Reel war. Ein Clip-Ausschnitt nie zweimal.
-2. **Eigene Fotos** aus `C:/Dev/Festbox/public/assets/images/` (Box, Drucke, Layouts, Team), bewegt mit Zoom und Schwenk.
+2. **Eigene Fotos** aus `C:/Dev/Festbox/public/assets/images/` (Box, Drucke, Layouts, Team), bewegt mit Zoom und Schwenk. Es gibt nur rund 29 Fotos, und der Post-Agent nutzt sie auch. Darum: dasselbe Foto in derselben Woche in höchstens **einem** Reel, und kein Reel besteht nur aus Fotos, die schon in der Vorwoche in Reels vorkamen. Fotos mit anderem Ausschnitt, anderer Bewegung und anderem Text wirken wieder neu.
 3. **Motion Graphics** mit `vidiq_motion_graphics` (Format `shorts-9-16`, rund 2–4 Credits): Text-Karten, Preisvergleiche, Checklisten, Zähler. Farben: Gelb `#FFD326`, Schwarz `#111111`, Creme `#F7F5EE`.
-4. **Stock-B-Roll** mit `vidiq_generate_broll` (1 Credit, `orientation: "portrait"`): nur für Stimmung (Konfetti, anstossende Gläser, tanzende Silhouetten, Lichterketten). Die Quelle **muss genannt werden**: letzte Zeile im Bildtext «Video: <Name> / <Quelle>».
+4. **Stock-B-Roll** mit `vidiq_generate_broll` (1 Credit pro Suche, bis 4 Clips zur Auswahl, `orientation: "portrait"`), damit 5 Reels pro Woche nicht nur aus denselben Fotos bestehen. Höchstens 6 Suchen pro Woche. Heruntergeladene Clips in `C:/Dev/Festbox-Clips/stock/` ablegen (nicht ins Repo) und in `reel.py` mit `clip` einbauen. Nur für Stimmung (Konfetti, anstossende Gläser, tanzende Silhouetten, Lichterketten). Die Quelle **muss genannt werden**: letzte Zeile im Bildtext «Video: <Name> / <Quelle>».
 5. **KI-Video**: nur mit Marlins Ja (siehe Regeln).
 
 ## Ton
@@ -67,7 +70,7 @@ Jedes Reel hat Ton. Viele schauen ohne Ton, darum steht alles Wichtige zusätzli
 - **Sichere Zonen** (1080 × 1920): oben 220 px, unten 420 px und rechts 140 px frei von Text, dort liegen die Bedienelemente der Apps.
 - **Branding dezent:** kleines Logo oder «@festbox.ch» in einer Ecke ab Sekunde 2, kein Abspann mit grossem Logo.
 
-**Formate, die abwechselnd verwendet werden** (jedes Format höchstens einmal in 2 Wochen):
+**Formate, die abwechselnd verwendet werden** (in einer Woche jedes Format höchstens einmal, und kein Reel gleicht im Aufbau einem Reel der Vorwoche):
 - POV-Szene («POV: Du hast die Fotobox gebucht und …»)
 - Vorher/Nachher oder Aufbau im Zeitraffer (eigene Clips)
 - «3 Dinge, die …» / «Darum …» als Liste mit Motion-Graphics-Karten
@@ -85,13 +88,13 @@ Für Reels aus **Fotos** gibt es `werkzeug/reel.py`. Es baut aus einer JSON-Date
 
 Vorlage: `reels/2026-10/2026-10-test-preis.json` (von Marlin abgenommen). Felder siehe `werkzeug/README.md`, Abschnitt «Reels».
 - **Szenen an die Stimme anpassen:** Nach dem Erzeugen der Stimme die Pausen messen (`ffmpeg -i stimme.mp3 -af silencedetect=noise=-35dB:d=0.25 -f null -`) und die Szenenlängen so wählen, dass jeder Szenenwechsel in eine Sprechpause fällt (plus `stimme_start`). Die Stimme Sarah spricht rund 13 Zeichen pro Sekunde.
-- Für **eigene Clips** und **Motion Graphics** kann `reel.py` noch nichts. Solche Szenen mit den ffmpeg-Befehlen aus Schritt 5 und 6 bauen und das Werkzeug dafür erweitern (Feld `clip` statt `bild`), dann erst verwenden, wenn ein Testlauf sauber ist.
+- **Video-Clips** (eigene Clips, Stock-B-Roll, heruntergeladene Motion Graphics) baut `reel.py` mit dem Feld `clip` statt `bild` ein, dazu `start` (Sekunde im Clip) und optional `tempo` (0.5 = Zeitlupe). Querformat wird automatisch auf Hochformat zugeschnitten, der Ton des Clips wird verworfen.
 
 ## Ablauf pro Lauf
 
-1. `cd C:/Dev/festbox-social && git pull`. `posts/verlauf.json`, `reels/credits.json`, `musik/README.md` und die letzten Notizen in `recherche/` lesen. In `C:/Dev/Festbox-Clips/freigegeben/` nach neuen Clips schauen.
+1. `cd C:/Dev/festbox-social && git pull`. `posts/verlauf.json` (nur lesen), `reels/verlauf.json`, `reels/credits.json`, `musik/README.md` und die letzten Notizen in `recherche/` lesen. In `C:/Dev/Festbox-Clips/freigegeben/` nach neuen Clips schauen.
 2. **Recherche** (höchstens 15 Credits): 1–2 Aufrufe `vidiq_instagram_tiktok_outlier_search` zu den Reel-Themen (gleiches `audienceQuery` wie in `AGENT.md`, `embeddingType` `hook` oder `format`, `durationMax` 30). Für das vielversprechendste Beispiel optional `vidiq_watch_shortform_content` (10 Credits) für den Ablauf Szene für Szene, aber nur, wenn das Guthaben über 60 liegt. Festhalten in `recherche/JJJJ-MM-TT-reels.md`: Aufhänger, Aufbau, Länge, Schnitt-Tempo, verwendete Sounds.
-3. **Plan pro Reel** in `reels/JJJJ-MM/<id>.json`: Format, Aufhänger, Szenenliste mit Sekunden (Material, Text im Bild, Bewegung), Sprechertext, Musik (Trend-Sound-Kandidaten und Bibliotheks-Track), Bildtext, Hashtags, Postzeit. Der Titel und die Kernaussage dürfen nicht schon im Verlauf stehen.
+3. **Wochenplan für 5 Reels**, dann pro Reel eine Datei `reels/JJJJ-MM/<id>.json`: Format, Aufhänger, Szenenliste mit Sekunden (Material, Text im Bild, Bewegung), Sprechertext, Musik (Trend-Sound-Kandidaten und Bibliotheks-Track), Bildtext, Hashtags, Postzeit. Titel, Aufhänger und Kernaussage dürfen weder in `reels/verlauf.json` noch in `posts/verlauf.json` stehen. Höchstens **ein** Reel pro Woche mit KI-Stimme (14 Credits), die anderen mit Musik und Text; mit echter Stimme von Marlin oder Anil beliebig viele.
 4. **Ton bauen:** Stimme erzeugen (falls geplant), mit `vidiq_job_poll` abwarten, MP3 nach `stimmen/` laden. Musik aus `musik/` wählen, nur wenn nötig einen neuen Track erzeugen.
 5. **Bildteile bauen** (bei reinen Foto-Reels erledigt das `reel.py`, dann direkt weiter mit 7):
    - Text-Einblendungen und Untertitel als transparente PNGs (1080 × 1920) mit den Festbox-Schriften (Sora 700 für Titel, Figtree für Untertitel aus `C:/Dev/Festbox/public/assets/fonts/`). Am einfachsten wie in `werkzeug/render.py` als HTML mit Playwright rendern (`omit_background=True`).
@@ -111,7 +114,7 @@ Vorlage: `reels/2026-10/2026-10-test-preis.json` (von Marlin abgenommen). Felder
 12. **Metricool-Entwurf anlegen** (ein Aufruf pro Reel):
     `{"autoPublish": true, "draft": true, "descendants": [], "firstCommentText": "", "hasNotReadNotes": false, "media": ["<raw-URL .mp4>"], "videoThumbnailUrl": "<raw-URL -cover.jpg>", "mediaAltText": [], "providers": [{"network": "instagram"}, {"network": "facebook"}], "publicationDate": {"dateTime": "JJJJ-MM-TTTHH:MM:00", "timezone": "Europe/Zurich"}, "shortener": false, "smartLinkData": {"ids": []}, "text": "<Bildtext>", "instagramData": {"type": "REEL", "showReelOnFeed": true, "isAiGenerated": <true|false>, "audioConfiguration": {"audioId": "<Trend-Sound>", "audioVolume": <0-100>, "videoVolume": <0-100>}}, "facebookData": {"type": "REEL"}}`
     Ohne Trend-Sound `audioConfiguration` ganz weglassen. Prüfen, dass `"draft": true` zurückkommt.
-13. **Nachführen:** Reels in `posts/verlauf.json` eintragen (mit `"format": "reel"`, Datum, Zeit, Format-Typ, Aufhänger, Titel, Bildtext, Material, Musik, Stimme, Trend-Sound, metricool_id), `reels/credits.json` (Datum, Werkzeug, Credits) und `C:/Dev/Festbox-Clips/verwendet.json` aktualisieren. Committen («Reel-Verlauf nachgeführt»), pushen.
+13. **Nachführen:** Reels in `reels/verlauf.json` eintragen (mit `"format": "reel"`, Datum, Zeit, Format-Typ, Aufhänger, Titel, Bildtext, Material, Musik, Stimme, Trend-Sound, metricool_id), `reels/credits.json` (Datum, Werkzeug, Credits) und `C:/Dev/Festbox-Clips/verwendet.json` aktualisieren. Committen («Reel-Verlauf nachgeführt»), pushen.
 
 ## Abschluss
 
