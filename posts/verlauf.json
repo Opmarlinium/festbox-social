@@ -1,13 +1,14 @@
 {
   "posts": [
     {
-      "datum": "2026-10-20",
+      "datum": "2026-10-25",
       "thema": "Stimmung",
       "layout": "foto",
       "bild": "gruppe-jubel.webp",
       "titel": "Hemmungen bleiben draussen.",
       "datei": "posts/2026-10/post-1.jpg",
-      "metricool_id": 400271062
+      "metricool_id": 402064874,
+      "zeit": "19:00"
     },
     {
       "datum": "2026-10-22",
