@@ -1,0 +1,79 @@
+{
+  "posts": [
+    {
+      "id": "post-2026-10-26-tipps",
+      "layout": "schritte",
+      "titel": "Wohin mit der *Fotobox?*",
+      "schritte": [
+        {
+          "titel": "Nah an die Party",
+          "text": "Neben Bar oder Tanzfläche kommen die Leute von selbst vorbei."
+        },
+        {
+          "titel": "Platz für Gruppen",
+          "text": "Genug Freiraum davor, damit die ganze Clique aufs Bild passt."
+        },
+        {
+          "titel": "Requisiten in Griffweite",
+          "text": "Ein kleiner Tisch daneben, und schon greift jeder zur Brille."
+        }
+      ],
+      "fuss": [
+        "festbox.ch",
+        "Tipps für Gastgeber"
+      ]
+    },
+    {
+      "id": "post-2026-10-28-geburtstag",
+      "layout": "zitat",
+      "titel": "Wer ist auf\neurem liebsten\n*Geburi*-Foto?",
+      "text": "Unlimitierte Fotos und QR-Download: Am Schluss hat jeder Gast seine Lieblingsbilder auf dem Handy.",
+      "bild": "paar-geburtstag.webp",
+      "bildposition": "50% 35%",
+      "fuss": [
+        "festbox.ch",
+        "Zürcher Oberland"
+      ]
+    },
+    {
+      "id": "post-2026-10-30-stimmung",
+      "layout": "panel",
+      "bild": "freunde-bar.webp",
+      "bildposition": "50% 40%",
+      "polaroid": "fotostreifen-film.webp",
+      "polaroid_text": "Fürs Fotoalbum",
+      "tag": "Drucke als Zusatz",
+      "titel": "Das Fest ist vorbei. *Der Streifen bleibt.*",
+      "text": "Foto machen, Streifen mitnehmen: 100 Drucke für CHF 59, 200 Drucke für CHF 99.",
+      "fuss": [
+        "festbox.ch",
+        "Zürcher Oberland"
+      ]
+    },
+    {
+      "id": "post-2026-10-31-jga",
+      "layout": "foto",
+      "bild": "freundinnen-polizeimuetze.webp",
+      "bildposition": "50% 30%",
+      "tag": "Polterabend & JGA",
+      "titel": "Die Braut ahnt\n*noch nichts.*",
+      "text": "Requisiten gibt's ab CHF 39 dazu. Beweisfotos inklusive.",
+      "fuss": [
+        "festbox.ch/anfrage",
+        "Zürcher Oberland"
+      ]
+    },
+    {
+      "id": "post-2026-11-01-silvester",
+      "layout": "zitat",
+      "titel": "Um *Mitternacht* wollen alle aufs Foto.",
+      "text": "Fotos sofort per QR-Code aufs Handy, die Online-Galerie steht innert 48 Stunden.",
+      "bild": "paar-silvester.webp",
+      "bildposition": "50% 40%",
+      "fuss": [
+        "festbox.ch/anfrage",
+        "Silvester"
+      ]
+    }
+  ]
+}
