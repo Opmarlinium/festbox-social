@@ -1,0 +1,20 @@
+{
+  "id": "2026-10-28-liste-fragen",
+  "format": "Liste «3 Fragen»",
+  "datum": "2026-10-28",
+  "musik": "../../musik/party-upbeat-122bpm.mp3",
+  "logo": true,
+  "szenen": [
+    {"bild": "gast-partyhut.webp", "dauer": 2.0, "bewegung": "zoom-in",
+     "oben": "3 Fragen, bevor ihr eine *Fotobox* bucht"},
+    {"bild": "fotobox-wohnzimmer.webp", "dauer": 3.2, "bewegung": "pan-links",
+     "marke": "Frage 1", "klein": "Selbst abholen oder\nliefern lassen?"},
+    {"bild": "fotostreifen-film.webp", "dauer": 3.2, "bewegung": "zoom-out",
+     "marke": "Frage 2", "klein": "Nur digital oder\nauch gedruckt?"},
+    {"bild": "sofortbild-requisite.webp", "dauer": 3.4, "bewegung": "zoom-in",
+     "marke": "Frage 3", "klein": "Wie weit ist euer Fest\nvon Wetzikon weg?"},
+    {"bild": "geburtstag-gelb-requisiten.webp", "dauer": 3.2, "bewegung": "zoom-out",
+     "oben": "Speichert euch das für die *Planung*", "unten": "👉 festbox.ch/anfrage"}
+  ],
+  "bildtext": "Drei Fragen, und eure Fotobox-Anfrage ist schnell erledigt 👇\n\n1️⃣ Abholen oder liefern? Paket S (CHF 349) holt ihr selbst ab, Paket M (CHF 590) bringen wir vorbei und holen es wieder ab.\n2️⃣ Digital oder gedruckt? Digitale Fotos sind immer unlimitiert dabei, 100 Drucke gibt es für CHF 59, 200 für CHF 99.\n3️⃣ Wie weit weg? Bis 20 km Luftlinie ab Bahnhof Wetzikon ist die Anfahrt inklusive.\n\nSpeichert euch das für die Planung und schickt es der Person, die das Fest mit euch organisiert.\n👉 festbox.ch/anfrage\n\n#fotobox #fotoboxmieten #photobooth #festplanung #wetzikon #zürcheroberland"
+}

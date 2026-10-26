@@ -1,0 +1,20 @@
+{
+  "id": "2026-10-26-pov-chef",
+  "format": "POV-Szene",
+  "datum": "2026-10-26",
+  "musik": "../../musik/party-upbeat-122bpm.mp3",
+  "logo": true,
+  "szenen": [
+    {"bild": "fotobox-aufgebaut.webp", "dauer": 2.0, "bewegung": "zoom-in",
+     "oben": "POV: Die Fotobox steht beim *Weihnachtsessen*"},
+    {"bild": "firmen-gruppe-jubel.webp", "dauer": 2.0, "bewegung": "pan-rechts",
+     "oben": "…und plötzlich will auch *der Chef* aufs Foto"},
+    {"bild": "layout-firmen-logo.webp", "dauer": 2.5, "bewegung": "zoom-in",
+     "marke": "Inklusive", "klein": "Euer Firmenlogo\nauf jedem Bild"},
+    {"bild": "freunde-bar.webp", "dauer": 2.0, "bewegung": "zoom-out",
+     "klein": "✓ Unlimitierte Fotos\n✓ Per QR-Code aufs Handy"},
+    {"bild": "hero-gruppe-party.webp", "dauer": 2.5, "bewegung": "zoom-in",
+     "oben": "Wer steht bei euch *zuerst* vor der Box?", "unten": "👉 festbox.ch/anfrage"}
+  ],
+  "bildtext": "Wer wäre in eurem Team als Erstes vor der Kamera? 😄\n\nAm Weihnachtsessen braucht es keine Ansprache, damit alle zusammenrücken. Euer Logo kommt auf jedes Bild, die Fotos gibt es sofort per QR-Code aufs Handy.\n\nMarkiert die Person, die bei euch nie von der Fotobox wegkommt 👇\n👉 festbox.ch/anfrage\n\n#fotobox #fotoboxmieten #photobooth #weihnachtsessen #firmenfest #zürcheroberland #zürich"
+}

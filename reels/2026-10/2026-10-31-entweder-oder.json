@@ -1,0 +1,22 @@
+{
+  "id": "2026-10-31-entweder-oder",
+  "format": "Entweder-oder",
+  "datum": "2026-10-31",
+  "musik": "../../musik/party-upbeat-122bpm.mp3",
+  "logo": true,
+  "szenen": [
+    {"bild": "kostuemparty.webp", "dauer": 1.8, "bewegung": "zoom-in",
+     "oben": "Entscheidet *schnell*: Was nehmt ihr?"},
+    {"bild": "party-huete-silbervorhang.webp", "dauer": 1.6, "bewegung": "pan-rechts",
+     "gross": "Silber", "klein": "oder …"},
+    {"bild": "party-goldvorhang.webp", "dauer": 1.6, "bewegung": "pan-links",
+     "gross": "Gold?"},
+    {"bild": "paar-silvester.webp", "dauer": 1.6, "bewegung": "zoom-in",
+     "gross": "Glitzer", "klein": "oder …"},
+    {"bild": "jga-konfetti.webp", "dauer": 1.6, "bewegung": "zoom-out",
+     "gross": "Konfetti?"},
+    {"bild": "gruppe-requisiten-sofa.webp", "dauer": 2.6, "bewegung": "zoom-in",
+     "oben": "Kommentiert eure *Kombi* 👇", "unten": "👉 festbox.ch/anfrage"}
+  ],
+  "bildtext": "Silber oder Gold, Glitzer oder Konfetti: Was wäre es bei euch? 🪩\n\nSamstagabend, Kostüm an, und dann die wichtigste Frage des Abends: Wie soll das Foto aussehen? Requisiten gibt es bei uns ab CHF 39, Hintergründe ab CHF 149.\n\nSchreibt eure Kombi in die Kommentare 👇\n👉 festbox.ch/anfrage\n\n#fotobox #fotoboxmieten #photobooth #party #zürcheroberland #zürich"
+}

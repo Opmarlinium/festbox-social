@@ -1,0 +1,22 @@
+{
+  "id": "2026-10-30-kulissen-layout",
+  "format": "Hinter den Kulissen",
+  "datum": "2026-10-30",
+  "musik": "../../musik/party-upbeat-122bpm.mp3",
+  "logo": true,
+  "szenen": [
+    {"bild": "layout-hochzeit-streifen.webp", "dauer": 2.0, "bewegung": "zoom-in",
+     "oben": "Dieses Detail merken sich die *Gäste*"},
+    {"bild": "layout-hochzeit-hochformat.webp", "dauer": 2.4, "bewegung": "pan-links",
+     "marke": "Euer Layout", "klein": "Namen des Brautpaars\noder Firmenlogo"},
+    {"bild": "layout-hochzeit-querformat.webp", "dauer": 2.4, "bewegung": "zoom-out",
+     "marke": "Auf jedem Foto", "klein": "Hoch- oder Querformat"},
+    {"bild": "hochzeit-blumenrahmen.webp", "dauer": 2.4, "bewegung": "zoom-in",
+     "marke": "Immer dabei", "klein": "In jedem Paket inklusive"},
+    {"bild": "hochzeit-gruppe.webp", "dauer": 2.2, "bewegung": "pan-rechts",
+     "klein": "Digital für alle Gäste,\nauf Wunsch auch gedruckt"},
+    {"bild": "paar-geburtstag.webp", "dauer": 2.2, "bewegung": "zoom-out",
+     "oben": "Was käme auf *euer* Layout?", "unten": "👉 festbox.ch/anfrage"}
+  ],
+  "bildtext": "Das kleine Extra, das auf jedem einzelnen Foto mitreist ✨\n\nIn jedem Paket ist ein eigenes Foto-Layout dabei, zum Beispiel mit den Namen des Brautpaars oder eurem Firmenlogo. So weiss auch in zehn Jahren jeder, von welchem Fest das Bild stammt.\n\nWas käme bei euch drauf: Namen, Datum oder Logo? Schreibt es uns 👇\n👉 festbox.ch/anfrage\n\n#fotobox #fotoboxmieten #photobooth #hochzeitschweiz #hochzeit #zürcheroberland"
+}

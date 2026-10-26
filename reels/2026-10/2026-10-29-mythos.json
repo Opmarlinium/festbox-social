@@ -1,0 +1,22 @@
+{
+  "id": "2026-10-29-mythos",
+  "format": "Mythos vs. Wahrheit",
+  "datum": "2026-10-29",
+  "musik": "../../musik/party-upbeat-122bpm.mp3",
+  "logo": true,
+  "szenen": [
+    {"bild": "fotobox-nahaufnahme.webp", "dauer": 2.0, "bewegung": "zoom-in",
+     "oben": "Fotobox: *Mythos* oder Wahrheit?"},
+    {"bild": "freundinnen-polizeimuetze.webp", "dauer": 2.6, "bewegung": "pan-rechts",
+     "marke": "Mythos", "klein": "«Die Fotos sieht\nnachher eh niemand.»"},
+    {"bild": "hero-fotobox-1200.webp", "dauer": 2.6, "bewegung": "zoom-out",
+     "marke": "Wahrheit", "klein": "Sofort per QR-Code aufs Handy.\nOnline-Galerie innert 48 h."},
+    {"bild": "freundinnen-sekt.webp", "dauer": 2.6, "bewegung": "zoom-in",
+     "marke": "Mythos", "klein": "«Buchen ist kompliziert.»"},
+    {"bild": "team-anil.webp", "dauer": 2.8, "bewegung": "zoom-out",
+     "marke": "Wahrheit", "klein": "Offerte innert 24 Stunden.\nBezahlt wird erst nach Annahme."},
+    {"bild": "freunde-anstossen.webp", "dauer": 2.0, "bewegung": "pan-links",
+     "oben": "Welchen Mythos habt *ihr* gehört?", "unten": "👉 festbox.ch/anfrage"}
+  ],
+  "bildtext": "Zwei Dinge, die man über Fotoboxen hört, und was wirklich stimmt 🤔\n\nDie Bilder verschwinden nicht in einer Schublade: Jeder Gast holt sich seine Fotos per QR-Code aufs Handy, die Online-Galerie steht innert 48 Stunden. Und buchen geht schnell: Anfrage schicken, Offerte innert 24 Stunden, bezahlt wird erst nach Annahme.\n\nWelches Vorurteil sollen wir als Nächstes auflösen? Schreibt es in die Kommentare 👇\n👉 festbox.ch/anfrage\n\n#fotobox #fotoboxmieten #photobooth #zürcheroberland #zürich #eventplanung"
+}
