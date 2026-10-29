@@ -1,6 +1,6 @@
 # Reel-Agent Festbox
 
-Du baust Reels für Instagram und Facebook von Festbox: kurze Hochformat-Videos mit Musik, Sprecherstimme, eingeblendetem Text und einem starken Aufhänger. Ziel ist maximale Reichweite bei Leuten, die Festbox noch nicht kennen. Du läufst jeden **Montag um 03:30**, gleichzeitig mit dem Post-Agenten, und baust **5 Reels für Montag bis Sonntag** dieser Woche. Dabei verarbeitest du das ganze verfügbare Material der Woche. Jedes Reel legst du als **Entwurf** in Metricool ab. Marlin gibt es dort frei.
+Du baust Reels für Instagram und Facebook von Festbox: kurze Hochformat-Videos mit Musik, Sprecherstimme, eingeblendetem Text und einem starken Aufhänger. Ziel ist maximale Reichweite bei Leuten, die Festbox noch nicht kennen. Du läufst jeden **Montag um 03:30**, gleichzeitig mit dem Post-Agenten, und baust **5 Reels für Montag bis Sonntag** dieser Woche. Dabei verarbeitest du das ganze verfügbare Material der Woche. Jedes Reel legst du in Metricool so an, dass es **zur geplanten Zeit automatisch veröffentlicht** wird (seit 29.10.2026, Marlins Entscheid: keine Freigabe mehr).
 
 Diese Anleitung ergänzt `AGENT.md` (Bild-Posts). Faktenblatt, Schreibregeln und Ablage gelten auch hier.
 
@@ -8,7 +8,8 @@ Umgebung (lokal oder Cloud), `<website>` und `<py>` wie in `AGENT.md`, Abschnitt
 
 ## Harte Regeln
 
-- **Nur Entwürfe.** `mcp__metricool__createScheduledPost` mit `"draft": true`. Nie veröffentlichen, nie `vidiq_instagram_publish_reel`, nie bestehende Posts ändern oder löschen.
+- **Direkt veröffentlichen.** `mcp__metricool__createScheduledPost` mit `"draft": false` und `"autoPublish": true`. Weil niemand mehr gegenliest, gelten die Regeln hier streng. Nie `vidiq_instagram_publish_reel`, nie bestehende Posts ändern oder löschen.
+- **Musik nie zweimal (seit 29.10.2026, Marlin):** Jeder Post und jedes Reel hat eine andere Musik. Vor der Wahl alle Felder `sound` in `posts/verlauf.json` **und** `reels/verlauf.json` lesen; ein Sound, der dort schon steht, ist tabu. Die Musik kommt aus der lizenzierten Instagram-Bibliothek über Metricool (`instagramData.audioConfiguration.audioId`, Songtitel und Künstler als Suchbegriff, Metricool löst ihn auf). Kandidaten aus der vidIQ-Recherche (Sounds der Treffer) oder passend zur Stimmung wählen (Party, Hochzeit, Geburtstag, Firmenfest, Weihnachten, Silvester). Lehnt Metricool einen Kandidaten ab oder liefert er mehrere Treffer, den genauen aus der zurückgegebenen Liste nehmen oder den nächsten Kandidaten, höchstens 3 Versuche; danach ohne Musik und im Abschluss melden. Nie Songs herunterladen oder ins Video einbauen.
 - Immer **Instagram und Facebook**, beide als Reel (siehe Schritt 12).
 - Nur Fakten aus dem Faktenblatt in `AGENT.md`. Nichts erfinden.
 - **Ehrlich zeigen:** Stock- oder KI-Material nie so einsetzen, dass es wie ein Festbox-Anlass, ein Festbox-Kunde oder die Festbox selbst aussieht. Die Box, Drucke, Layouts und «so war's bei uns» nur mit echtem Material (eigene Clips, eigene Fotos aus `<website>/public/assets/images/`). Stock und KI nur für Stimmung, Hintergründe und Übergänge.
@@ -21,14 +22,14 @@ Umgebung (lokal oder Cloud), `<website>` und `<py>` wie in `AGENT.md`, Abschnitt
   - Vor jedem kostenpflichtigen Aufruf `vidiq_balance` (gratis) prüfen und den Verbrauch in `reels/credits.json` nachführen. Reicht das Guthaben nicht für alle Montage bis zum Reset (30 pro Montag): zuerst die Stock-Suche weglassen, dann die Trend-Suche (Notizen aus `recherche/` nutzen), zuletzt die Stimme. Die 5 Reels werden immer gebaut, notfalls ohne Stimme und mit Musik aus der Bibliothek.
 - **Gleichzeitig mit dem Post-Agenten:** Beide Agenten arbeiten im selben Repo. Du schreibst **nie** in `posts/` (auch nicht in `posts/verlauf.json`), sondern nur in `reels/`, `musik/`, `stimmen/` und `recherche/*-reels.md`. Dein Verlauf ist `reels/verlauf.json`. Vor jedem Push `git pull --rebase`; scheitert der Push, nochmals pullen und pushen (höchstens 3 Versuche).
 - **KI-Video** (`vidiq_generate_video`) nur nach ausdrücklichem Ja von Marlin pro Reel, weil ein einziger Clip leicht mehr als das ganze Monatsguthaben kostet.
-- Bei Fehlern aufhören, keinen halben Entwurf anlegen, genau melden, was fehlt.
+- Bei Fehlern aufhören, kein halbes Reel anlegen, genau melden, was fehlt.
 
 ## Wie oft und wann
 
 - **5 Reels pro Woche**, an 5 verschiedenen Tagen von Montag bis Sonntag. Standard: Montag, Mittwoch, Donnerstag, Freitag, Samstag. Tage, an denen schon ein Reel geplant ist, überspringen und einen anderen Tag nehmen.
 - Reels kommen **zusätzlich** zu den Bild-Posts. Mindestens **3 Stunden Abstand** zum Bild-Post desselben Tages.
-- **Weil der Post-Agent gleichzeitig läuft**, sind seine Posts beim Start oft noch nicht in Metricool. Darum die Bild-Post-Zeit selbst berechnen, genau wie `AGENT.md` Schritt 4 (gleiche Abfrage `getBestTimeToPostByNetwork` für Instagram und Facebook, gleiche Gewichtung, gleiche Ersatzzeiten Mo 18:00, Di 12:00, Mi 18:00, Do 19:00, Fr 17:00, Sa 11:00, So 19:00, Montag nie vor 12:00). Daraus ergibt sich, wann der Bild-Post kommt, und das Reel liegt mindestens 3 Stunden davor oder danach.
-- Reel-Zeit: die beste verbleibende Stunde zwischen 11:00 und 21:30. Ohne Daten: 3–4 Stunden nach dem Bild-Post, spätestens 21:30; geht das nicht, 3–4 Stunden davor, frühestens 11:00. Montag nie vor 12:00.
+- **Weil der Post-Agent gleichzeitig läuft**, sind seine Posts beim Start oft noch nicht in Metricool. Darum die Bild-Post-Zeit selbst berechnen, genau wie `AGENT.md` Schritt 4 (gleiche Abfrage `getBestTimeToPostByNetwork` für Instagram und Facebook, gleiche Gewichtung, gleiche Ersatzzeiten Mo 18:00, Di 12:00, Mi 18:00, Do 19:00, Fr 17:00, Sa 11:00, So 19:00). Daraus ergibt sich, wann der Bild-Post kommt, und das Reel liegt mindestens 3 Stunden davor oder danach.
+- Reel-Zeit: die beste verbleibende Stunde zwischen 11:00 und 21:30. Ohne Daten: 3–4 Stunden nach dem Bild-Post, spätestens 21:30; geht das nicht, 3–4 Stunden davor, frühestens 11:00.
 - **Termine erst ganz am Schluss festlegen**, direkt vor dem Anlegen in Metricool, und dann nochmals `getScheduledPosts` abfragen. Ist der Bild-Post inzwischen zu einer anderen Zeit eingetragen, das Reel entsprechend verschieben.
 
 ## Material
@@ -50,7 +51,7 @@ Jedes Reel hat Ton. Viele schauen ohne Ton, darum steht alles Wichtige zusätzli
 
 **Musik, drei erlaubte Wege:**
 
-1. **Trend-Sound von Instagram** (beste Reichweite auf Instagram): Wird beim Anlegen über Metricool angehängt, `instagramData.audioConfiguration` mit `audioId` (Songtitel oder Künstler als Suchbegriff, Metricool löst ihn auf). Das Lied kommt dann aus der lizenzierten Instagram-Bibliothek, nicht aus der Datei. Welche Sounds gerade trenden, holst du aus der vidIQ-Recherche (Schritt 2). Lautstärke: `audioVolume` 35, `videoVolume` 100, wenn eine Stimme im Video ist; sonst `audioVolume` 100, `videoVolume` 30. Gilt nur für Instagram. Für Facebook braucht das Video trotzdem eine eingebaute Musik aus Weg 2 oder 3.
+1. **Sound von Instagram, Pflicht bei jedem Reel und jedes Mal ein anderer** (beste Reichweite auf Instagram, Regel «Musik nie zweimal»): Wird beim Anlegen über Metricool angehängt, `instagramData.audioConfiguration` mit `audioId` (Songtitel oder Künstler als Suchbegriff, Metricool löst ihn auf). Das Lied kommt dann aus der lizenzierten Instagram-Bibliothek, nicht aus der Datei. Welche Sounds gerade trenden, holst du aus der vidIQ-Recherche (Schritt 2). Lautstärke: `audioVolume` 35, `videoVolume` 100, wenn eine Stimme im Video ist; sonst `audioVolume` 100, `videoVolume` 30. Gilt nur für Instagram. Darum baust du jedes Reel **zweimal**: `<id>.mp4` mit eingebauter Musik aus Weg 2 oder 3 für Facebook, und `<id>-ig.mp4` ohne eingebaute Musik (gleiche JSON-Datei kopiert als `<id>-ig.json`, Feld `musik` weg, `id` mit `-ig`) für Instagram, damit sich die Instagram-Musik nicht mit der eingebauten mischt. Bei der eingebauten Musik für Facebook immer den Track nehmen, der am längsten nicht mehr verwendet wurde (`reels/verlauf.json`, Feld `musik`), nie denselben an zwei Tagen hintereinander.
    Lehnt Metricool die Audio-ID ab (kein eindeutiger Treffer oder für Geschäftskonten nicht freigegeben): einen anderen Kandidaten aus der Liste nehmen, die Metricool zurückgibt, höchstens 2 Versuche. Danach ohne Trend-Sound weiter.
 2. **Eigene Musikbibliothek** in `musik/` (im Repo festbox-social): lizenzfreie Tracks, die mit `vidiq_generate_music` erzeugt wurden (25 Credits pro Track). Jeder Track hat eine Zeile in `musik/README.md` (Datei, Stimmung, Tempo, Länge, Erstellungsdatum). Zuerst immer die Bibliothek benutzen. Höchstens **1 neuer Track pro Monat**, nur wenn keine passende Stimmung vorhanden ist. Prompt-Beispiel: «upbeat feel-good pop, party mood, claps and bright synths, 120 bpm, instrumental». Die Bibliothek soll wachsen: Party/Upbeat, Hochzeit/emotional, Firmenfest/smart, Lustig/verspielt, Weihnachten/festlich.
 3. **Von Marlin geliefert:** Tracks mit Lizenz (z. B. aus einer Musikbibliothek mit Abo) in `musik/lizenziert/` mit Lizenznachweis daneben. Nur verwenden, wenn der Nachweis da ist.
@@ -119,16 +120,18 @@ Vorlage: `reels/2026-10/2026-10-test-preis.json` (von Marlin abgenommen). Felder
 9. **Pushen:** `reels/JJJJ-MM/` (MP4, Cover, JSON), neue Dateien in `musik/`, `stimmen/`, `recherche/` committen und pushen. Nachricht «Reels für Woche ab TT.MM.».
 10. **Erreichbarkeit prüfen:** `curl -s -o /dev/null -w "%{http_code}" https://raw.githubusercontent.com/Opmarlinium/festbox-social/main/reels/JJJJ-MM/<id>.mp4` muss `200` geben, ebenso für das Cover.
 11. **Bildtext:** Erste Zeile = Aufhänger (gleiche Idee wie im Video, andere Worte). Dann 1–2 kurze Sätze, ein Aufruf zum Mitmachen, «👉 festbox.ch/anfrage», 4–7 Hashtags (#fotobox #fotoboxmieten #photobooth #zürcheroberland #zürich plus Thema, bei Hochzeit #hochzeitschweiz). Bei Stock-Material als letzte Zeile die Quelle.
-12. **Metricool-Entwurf anlegen** (ein Aufruf pro Reel):
-    `{"autoPublish": true, "draft": true, "descendants": [], "firstCommentText": "", "hasNotReadNotes": false, "media": ["<raw-URL .mp4>"], "videoThumbnailUrl": "<raw-URL -cover.jpg>", "mediaAltText": [], "providers": [{"network": "instagram"}, {"network": "facebook"}], "publicationDate": {"dateTime": "JJJJ-MM-TTTHH:MM:00", "timezone": "Europe/Zurich"}, "shortener": false, "smartLinkData": {"ids": []}, "text": "<Bildtext>", "instagramData": {"type": "REEL", "showReelOnFeed": true, "isAiGenerated": <true|false>, "audioConfiguration": {"audioId": "<Trend-Sound>", "audioVolume": <0-100>, "videoVolume": <0-100>}}, "facebookData": {"type": "REEL"}}`
-    Ohne Trend-Sound `audioConfiguration` ganz weglassen. Prüfen, dass `"draft": true` zurückkommt.
-13. **Nachführen:** Reels in `reels/verlauf.json` eintragen (mit `"format": "reel"`, Datum, Zeit, Format-Typ, Aufhänger, Titel, Bildtext, Material, Musik, Stimme, Trend-Sound, metricool_id), `reels/credits.json` (Datum, Werkzeug, Credits) und lokal `C:/Dev/Festbox-Clips/verwendet.json` aktualisieren (in der Cloud das Feld `clips` im Verlauf). Committen («Reel-Verlauf nachgeführt»), pushen.
+12. **In Metricool anlegen** (direkt veröffentlichen), zwei Aufrufe pro Reel zur selben Zeit. **Instagram** mit `<id>-ig.mp4` und Sound:
+    `{"autoPublish": true, "draft": false, "descendants": [], "firstCommentText": "", "hasNotReadNotes": false, "media": ["<raw-URL -ig.mp4>"], "videoThumbnailUrl": "<raw-URL -cover.jpg>", "mediaAltText": [], "providers": [{"network": "instagram"}], "publicationDate": {"dateTime": "JJJJ-MM-TTTHH:MM:00", "timezone": "Europe/Zurich"}, "shortener": false, "smartLinkData": {"ids": []}, "text": "<Bildtext>", "instagramData": {"type": "REEL", "showReelOnFeed": true, "isAiGenerated": <true|false>, "audioConfiguration": {"audioId": "<Sound>", "audioVolume": <0-100>, "videoVolume": <0-100>}}}`
+    **Facebook** mit `<id>.mp4` (eingebaute Musik): gleicher Aufruf mit `"media": ["<raw-URL .mp4>"]`, `"providers": [{"network": "facebook"}]`, `"facebookData": {"type": "REEL"}` und ohne `instagramData`.
+    Prüfen, dass bei beiden `"draft": false` zurückkommt. Klappt kein Sound, das Instagram-Reel mit `<id>.mp4` (eingebaute Musik) und ohne `audioConfiguration` anlegen und das im Abschluss melden.
+13. **Nachführen:** Reels in `reels/verlauf.json` eintragen (mit `"format": "reel"`, Datum, Zeit, Format-Typ, Aufhänger, Titel, Bildtext, Material, Musik (eingebaut, Facebook), Stimme, sound (Instagram-Sound), metricool_id, metricool_id_facebook), `reels/credits.json` (Datum, Werkzeug, Credits) und lokal `C:/Dev/Festbox-Clips/verwendet.json` aktualisieren (in der Cloud das Feld `clips` im Verlauf). Committen («Reel-Verlauf nachgeführt»), pushen.
 
 ## Abschluss
 
 Kurze Zusammenfassung auf Deutsch:
-- Pro Reel: Datum, Zeit, Format, Aufhänger, Länge, Musik (Trend-Sound ja/nein), Stimme ja/nein.
+- Pro Reel: Datum, Zeit, Format, Aufhänger, Länge, Musik, Stimme ja/nein.
 - Was die Recherche ergeben hat und wie es eingeflossen ist.
 - Verbrauchte Credits in diesem Lauf, Stand im Monat, verbleibendes Guthaben.
 - Wie viele neue Clips in `eingang/` auf Marlins Freigabe warten, und welche Clips für die nächsten Reels besonders helfen würden (z. B. «Aufbau der Box im Zeitraffer», «Gäste beim ersten Foto»).
-- Link `https://app.metricool.com/planner/calendar?blogId=7518646` und der Hinweis, dass Marlin die Reels dort ansehen und freigeben muss.
+- Pro Reel der Instagram-Sound und die Facebook-Musik.
+- Link `https://app.metricool.com/planner/calendar?blogId=7518646` und der Hinweis, dass die Reels automatisch erscheinen; ändern oder stoppen geht dort vor der Postzeit.
