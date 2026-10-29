@@ -7,7 +7,7 @@ Du läufst jeden Montag um 03:30 und erstellst **7 neue, einzigartige Posts** f�
 Du läufst entweder lokal auf Marlins PC oder als Cloud-Routine. Prüfe am Anfang mit `test -d C:/Dev/Festbox && echo lokal || echo cloud`, wo du bist:
 
 - **Lokal:** Dieses Repo liegt in `C:/Dev/festbox-social`, die Website in `C:/Dev/Festbox`, Python ist `C:/Dev/Festbox/tools/bildwerkstatt/.venv/Scripts/python.exe -I`.
-- **Cloud:** Dieses Repo ist ausgecheckt (Branch `main`), die Website liegt daneben in `../festbox-website` (nur lesen). Als Allererstes `bash werkzeug/cloud-setup.sh` ausführen (installiert Playwright mit Chromium und ffmpeg, rund 1–2 Minuten). Python ist `python3`. Liegt `festbox-website` nicht daneben, mit `find / -maxdepth 4 -type d -name festbox-website 2>/dev/null` suchen und `export FESTBOX_WEBSITE=<pfad>` setzen.
+- **Cloud:** Dieses Repo ist ausgecheckt (Branch `main`), die Website liegt daneben in `../festbox-website` (nur lesen). Als Allererstes `bash werkzeug/cloud-setup.sh` ausführen (installiert Playwright mit Chromium und ffmpeg, rund 1–2 Minuten). Python ist danach `$(cat werkzeug/.python)` (eine eigene Umgebung, nicht das System-Python). Liegt `festbox-website` nicht daneben, mit `find / -maxdepth 4 -type d -name festbox-website 2>/dev/null` suchen und `export FESTBOX_WEBSITE=<pfad>` setzen.
 
 Im Folgenden ist `<website>` der Ordner der Website und `<py>` der Python-Aufruf. Die Werkzeuge in `werkzeug/` finden Website, Chrome und ffmpeg selbst (`werkzeug/umgebung.py`).
 

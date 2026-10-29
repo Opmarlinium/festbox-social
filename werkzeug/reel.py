@@ -2,7 +2,7 @@
 
 Aufruf lokal:
   C:/Dev/Festbox/tools/bildwerkstatt/.venv/Scripts/python.exe -I werkzeug/reel.py reels/2026-10/<id>.json
-In der Cloud nach werkzeug/cloud-setup.sh: python3 werkzeug/reel.py reels/2026-10/<id>.json
+In der Cloud nach werkzeug/cloud-setup.sh: $(cat werkzeug/.python) werkzeug/reel.py reels/2026-10/<id>.json
 
 Schreibt <ordner>/<id>.mp4 und <ordner>/<id>-cover.jpg. Zwischendateien landen in <ordner>/_arbeit/ (nicht committen).
 Felder: siehe werkzeug/README.md, Abschnitt «Reels».

@@ -2,7 +2,7 @@
 
 Aufruf lokal (Python aus der Bildwerkstatt, dort ist Playwright installiert):
   C:/Dev/Festbox/tools/bildwerkstatt/.venv/Scripts/python.exe -I werkzeug/render.py posts/2026-11/stapel.json
-In der Cloud nach werkzeug/cloud-setup.sh: python3 werkzeug/render.py posts/2026-11/stapel.json
+In der Cloud nach werkzeug/cloud-setup.sh: $(cat werkzeug/.python) werkzeug/render.py posts/2026-11/stapel.json
 
 Schreibt pro Post <ordner>/<id>.jpg und eine Kontrollseite <ordner>/vorschau.html.
 Felder pro Post: siehe werkzeug/README.md.
