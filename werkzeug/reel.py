@@ -1,14 +1,16 @@
 """Baut ein Festbox-Reel (1080 x 1920, 30 fps, H.264/AAC) aus Fotos, Text-Einblendungen, Stimme und Musik.
 
-Aufruf:
+Aufruf lokal:
   C:/Dev/Festbox/tools/bildwerkstatt/.venv/Scripts/python.exe -I werkzeug/reel.py reels/2026-10/<id>.json
+In der Cloud nach werkzeug/cloud-setup.sh: python3 werkzeug/reel.py reels/2026-10/<id>.json
 
 Schreibt <ordner>/<id>.mp4 und <ordner>/<id>-cover.jpg. Zwischendateien landen in <ordner>/_arbeit/ (nicht committen).
 Felder: siehe werkzeug/README.md, Abschnitt «Reels».
 """
 import html, json, pathlib, shutil, subprocess, sys
 
-FESTBOX = pathlib.Path("C:/Dev/Festbox")
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+from umgebung import FESTBOX, FFMPEG, browser  # lokal C:/Dev/Festbox, in der Cloud ../festbox-website
 BILDER = FESTBOX / "public/assets/images"
 FONTS = FESTBOX / "public/assets/fonts"
 LOGO = FESTBOX / "grafiken/social-media/festbox-logo-dunkel-600.png"
@@ -91,7 +93,7 @@ def main():
     css = CSS.replace("SORA", (FONTS / "sora-700-latin.woff2").as_uri()).replace("FIGTREE", (FONTS / "figtree-latin.woff2").as_uri())
     from playwright.sync_api import sync_playwright
     with sync_playwright() as pw:
-        b = pw.chromium.launch(channel="chrome")
+        b = browser(pw)
         pg = b.new_page(viewport={"width": W, "height": H})
         for i, sz in enumerate(szenen):
             seite = arbeit / f"o{i}.html"
@@ -115,7 +117,7 @@ def main():
             vf = (f"[0:v]setpts=PTS/{tempo},scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},"
                   f"fps={FPS},setsar=1,tpad=stop_mode=clone:stop_duration={sz['dauer']}[bg];"
                   f"[bg][1:v]overlay=0:0,format=yuv420p[v]")
-            run(["ffmpeg", "-y", "-ss", str(sz.get("start", 0)), "-i", str(clip), "-i", str(arbeit / f"o{i}.png"),
+            run([FFMPEG, "-y", "-ss", str(sz.get("start", 0)), "-i", str(clip), "-i", str(arbeit / f"o{i}.png"),
                  "-filter_complex", vf, "-map", "[v]", "-frames:v", str(n), "-an",
                  "-c:v", "libx264", "-preset", "medium", "-crf", "18", str(out)])
         else:
@@ -125,7 +127,7 @@ def main():
             vf = (f"[0:v]scale=2160:3840:force_original_aspect_ratio=increase,crop=2160:3840,"
                   f"zoompan={bewegung(sz.get('bewegung', 'zoom-in'), n)}:d={n}:s={W}x{H}:fps={FPS},setsar=1[bg];"
                   f"[bg][1:v]overlay=0:0,format=yuv420p[v]")
-            run(["ffmpeg", "-y", "-loop", "1", "-i", str(bild), "-i", str(arbeit / f"o{i}.png"),
+            run([FFMPEG, "-y", "-loop", "1", "-i", str(bild), "-i", str(arbeit / f"o{i}.png"),
                  "-filter_complex", vf, "-map", "[v]", "-frames:v", str(n), "-r", str(FPS),
                  "-c:v", "libx264", "-preset", "medium", "-crf", "18", str(out)])
         teile.append(out)
@@ -134,7 +136,7 @@ def main():
     liste = arbeit / "liste.txt"
     liste.write_text("".join(f"file '{p.as_posix()}'\n" for p in teile), encoding="utf-8")
     stumm = arbeit / "stumm.mp4"
-    run(["ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", str(liste), "-c", "copy", str(stumm)])
+    run([FFMPEG, "-y", "-f", "concat", "-safe", "0", "-i", str(liste), "-c", "copy", str(stumm)])
     dauer = sum(s["dauer"] for s in szenen)
 
     # 4) Ton: Musik (+ Stimme), Ende ausblenden, auf -14 LUFS
@@ -156,14 +158,14 @@ def main():
     if mix:
         filt.append(f"{''.join(mix)}amix=inputs={len(mix)}:normalize=0:duration=longest,atrim=0:{dauer},"
                     f"loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000[a]")
-        run(["ffmpeg", "-y", *ein, "-filter_complex", ";".join(filt), "-map", "0:v", "-map", "[a]",
+        run([FFMPEG, "-y", *ein, "-filter_complex", ";".join(filt), "-map", "0:v", "-map", "[a]",
              "-c:v", "libx264", "-preset", "slow", "-crf", "20", "-pix_fmt", "yuv420p",
              "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", "-t", str(dauer), str(ziel)])
     else:
         shutil.copy(stumm, ziel)
 
     # 5) Titelbild: erstes Bild der ersten Szene (mit Aufhänger)
-    run(["ffmpeg", "-y", "-ss", "0.8", "-i", str(ziel), "-frames:v", "1", "-q:v", "2", str(ordner / f"{rid}-cover.jpg")])
+    run([FFMPEG, "-y", "-ss", "0.8", "-i", str(ziel), "-frames:v", "1", "-q:v", "2", str(ordner / f"{rid}-cover.jpg")])
     print(f"ok: {ziel.name} ({dauer:.1f} s)")
 
 

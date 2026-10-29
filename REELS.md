@@ -4,12 +4,14 @@ Du baust Reels für Instagram und Facebook von Festbox: kurze Hochformat-Videos 
 
 Diese Anleitung ergänzt `AGENT.md` (Bild-Posts). Faktenblatt, Schreibregeln und Ablage gelten auch hier.
 
+Umgebung (lokal oder Cloud), `<website>` und `<py>` wie in `AGENT.md`, Abschnitt «Umgebung». In der Cloud zuerst `bash werkzeug/cloud-setup.sh`.
+
 ## Harte Regeln
 
 - **Nur Entwürfe.** `mcp__metricool__createScheduledPost` mit `"draft": true`. Nie veröffentlichen, nie `vidiq_instagram_publish_reel`, nie bestehende Posts ändern oder löschen.
 - Immer **Instagram und Facebook**, beide als Reel (siehe Schritt 12).
 - Nur Fakten aus dem Faktenblatt in `AGENT.md`. Nichts erfinden.
-- **Ehrlich zeigen:** Stock- oder KI-Material nie so einsetzen, dass es wie ein Festbox-Anlass, ein Festbox-Kunde oder die Festbox selbst aussieht. Die Box, Drucke, Layouts und «so war's bei uns» nur mit echtem Material (eigene Clips, eigene Fotos aus `C:/Dev/Festbox/public/assets/images/`). Stock und KI nur für Stimmung, Hintergründe und Übergänge.
+- **Ehrlich zeigen:** Stock- oder KI-Material nie so einsetzen, dass es wie ein Festbox-Anlass, ein Festbox-Kunde oder die Festbox selbst aussieht. Die Box, Drucke, Layouts und «so war's bei uns» nur mit echtem Material (eigene Clips, eigene Fotos aus `<website>/public/assets/images/`). Stock und KI nur für Stimmung, Hintergründe und Übergänge.
 - **Musik nur legal:** Nie Songs aus Charts, TikTok, YouTube, Spotify usw. herunterladen, ausschneiden oder ins Video einbauen, auch nicht kurz und auch nicht «nur als Test». Erlaubt sind nur die drei Wege im Abschnitt «Ton».
 - **Personen im Bild:** Eigene Clips nur aus dem Ordner `freigegeben/` (siehe «Material»). Keine Kinder erkennbar zeigen. Keine Namen von Gästen oder Kunden in Bild, Ton oder Text.
 - **KI kennzeichnen:** Enthält ein Reel eine KI-Stimme, KI-Musik oder KI-Video, dann `isAiGenerated: true` (Instagram). Im Bildtext nichts verschweigen, aber auch nicht extra betonen.
@@ -33,13 +35,13 @@ Diese Anleitung ergänzt `AGENT.md` (Bild-Posts). Faktenblatt, Schreibregeln und
 
 Reihenfolge, was zuerst genommen wird:
 
-1. **Eigene Clips** von Marlin und Anil, lokal in `C:/Dev/Festbox-Clips/` (nicht im Git, nie in ein Repo kopieren ausser als fertig geschnittenes Reel):
+1. **Eigene Clips** von Marlin und Anil (nicht im Git, nie in ein Repo kopieren ausser als fertig geschnittenes Reel). Lokal in `C:/Dev/Festbox-Clips/`. **In der Cloud** im Google-Drive-Ordner «Festbox-Clips» mit denselben Unterordnern: über den Google-Drive-Konnektor nur die Clips aus `freigegeben/` herunterladen nach `reels/_clips/` (steht in `.gitignore`, nie committen). Ist Google Drive nicht verfügbar oder der Ordner leer, ohne eigene Clips weiterarbeiten und das im Abschluss sagen.
    - `eingang/`: neue Clips, noch nicht geprüft. **Nicht verwenden.** Im Abschluss melden, wie viele neue Clips warten.
    - `freigegeben/`: Marlin hat bestätigt, dass die gezeigten Personen einverstanden sind. Nur diese verwenden.
-   - `verwendet.json`: welcher Clip in welchem Reel war. Ein Clip-Ausschnitt nie zweimal.
-2. **Eigene Fotos** aus `C:/Dev/Festbox/public/assets/images/` (Box, Drucke, Layouts, Team), bewegt mit Zoom und Schwenk. Es gibt nur rund 29 Fotos, und der Post-Agent nutzt sie auch. Darum: dasselbe Foto in derselben Woche in höchstens **einem** Reel, und kein Reel besteht nur aus Fotos, die schon in der Vorwoche in Reels vorkamen. Fotos mit anderem Ausschnitt, anderer Bewegung und anderem Text wirken wieder neu.
+   - `verwendet.json` (lokal): welcher Clip in welchem Reel war. Ein Clip-Ausschnitt nie zweimal. In der Cloud gibt es diese Datei nicht: dort steht im Eintrag jedes Reels in `reels/verlauf.json` das Feld `clips` (Dateiname und Sekunden), und vor der Auswahl prüfst du beide Quellen.
+2. **Eigene Fotos** aus `<website>/public/assets/images/` (Box, Drucke, Layouts, Team), bewegt mit Zoom und Schwenk. Es gibt nur rund 29 Fotos, und der Post-Agent nutzt sie auch. Darum: dasselbe Foto in derselben Woche in höchstens **einem** Reel, und kein Reel besteht nur aus Fotos, die schon in der Vorwoche in Reels vorkamen. Fotos mit anderem Ausschnitt, anderer Bewegung und anderem Text wirken wieder neu.
 3. **Motion Graphics** mit `vidiq_motion_graphics` (Format `shorts-9-16`, rund 2–4 Credits): Text-Karten, Preisvergleiche, Checklisten, Zähler. Farben: Gelb `#FFD326`, Schwarz `#111111`, Creme `#F7F5EE`.
-4. **Stock-B-Roll** mit `vidiq_generate_broll` (1 Credit pro Suche, bis 4 Clips zur Auswahl, `orientation: "portrait"`), damit 5 Reels pro Woche nicht nur aus denselben Fotos bestehen. Höchstens 6 Suchen pro Woche. Heruntergeladene Clips in `C:/Dev/Festbox-Clips/stock/` ablegen (nicht ins Repo) und in `reel.py` mit `clip` einbauen. Nur für Stimmung (Konfetti, anstossende Gläser, tanzende Silhouetten, Lichterketten). Die Quelle **muss genannt werden**: letzte Zeile im Bildtext «Video: <Name> / <Quelle>».
+4. **Stock-B-Roll** mit `vidiq_generate_broll` (1 Credit pro Suche, bis 4 Clips zur Auswahl, `orientation: "portrait"`), damit 5 Reels pro Woche nicht nur aus denselben Fotos bestehen. Höchstens 6 Suchen pro Woche. Heruntergeladene Clips lokal in `C:/Dev/Festbox-Clips/stock/`, in der Cloud in `reels/_clips/stock/` ablegen (nicht ins Repo) und in `reel.py` mit `clip` einbauen. Nur für Stimmung (Konfetti, anstossende Gläser, tanzende Silhouetten, Lichterketten). Die Quelle **muss genannt werden**: letzte Zeile im Bildtext «Video: <Name> / <Quelle>».
 5. **KI-Video**: nur mit Marlins Ja (siehe Regeln).
 
 ## Ton
@@ -61,7 +63,7 @@ Jedes Reel hat Ton. Viele schauen ohne Ton, darum steht alles Wichtige zusätzli
 - Stimmen: **Sarah** (`EXAVITQu4vr4xnSDxMaL`), warm und vertrauenswürdig, und **Laura** (`FGY2WhTYpPnrIDTdsKH5`), fröhlich und verspielt. Nur diese zwei, damit Festbox wiedererkennbar klingt.
 - Sprache: Hochdeutsch, kurze Sätze, natürlich gesprochen, Zahlen ausgeschrieben («dreihundertneunundvierzig Franken»). Kein Schweizerdeutsch (klingt bei der KI falsch). Mundart-Wörter nur im eingeblendeten Text.
 - Fertige Stimmen in `stimmen/` ablegen und im Verlauf vermerken. Eine Stimme kann in mehreren Schnittversionen verwendet werden.
-- Echte Stimme von Marlin oder Anil (Sprachmemo in `C:/Dev/Festbox-Clips/freigegeben/`) ist immer besser als KI und wird bevorzugt.
+- Echte Stimme von Marlin oder Anil (Sprachmemo in `freigegeben/` der Clips) ist immer besser als KI und wird bevorzugt.
 
 **Abmischung:** Stimme vorne, Musik darunter (−18 bis −22 dB unter der Stimme), am Ende auf **−14 LUFS** normalisieren (`ffmpeg -af loudnorm=I=-14:TP=-1.5:LRA=11`).
 
@@ -90,7 +92,7 @@ Jedes Reel hat Ton. Viele schauen ohne Ton, darum steht alles Wichtige zusätzli
 
 Für Reels aus **Fotos** gibt es `werkzeug/reel.py`. Es baut aus einer JSON-Datei das fertige MP4 samt Titelbild (Bewegung, Text-Einblendungen im Festbox-Stil, Stimme, Musik, Abmischung auf −14 LUFS):
 
-`C:/Dev/Festbox/tools/bildwerkstatt/.venv/Scripts/python.exe -I werkzeug/reel.py reels/JJJJ-MM/<id>.json`
+`<py> werkzeug/reel.py reels/JJJJ-MM/<id>.json`
 
 Vorlage: `reels/2026-10/2026-10-test-preis.json` (von Marlin abgenommen). Felder siehe `werkzeug/README.md`, Abschnitt «Reels».
 - **Szenen an die Stimme anpassen:** Nach dem Erzeugen der Stimme die Pausen messen (`ffmpeg -i stimme.mp3 -af silencedetect=noise=-35dB:d=0.25 -f null -`) und die Szenenlängen so wählen, dass jeder Szenenwechsel in eine Sprechpause fällt (plus `stimme_start`). Die Stimme Sarah spricht rund 13 Zeichen pro Sekunde.
@@ -98,12 +100,12 @@ Vorlage: `reels/2026-10/2026-10-test-preis.json` (von Marlin abgenommen). Felder
 
 ## Ablauf pro Lauf
 
-1. `cd C:/Dev/festbox-social && git pull`. `posts/verlauf.json` (nur lesen), `reels/verlauf.json`, `reels/credits.json`, `musik/README.md` und die letzten Notizen in `recherche/` lesen. In `C:/Dev/Festbox-Clips/freigegeben/` nach neuen Clips schauen.
+1. Umgebung prüfen, in der Cloud `bash werkzeug/cloud-setup.sh`. Dann ins Repo festbox-social und `git pull`. `posts/verlauf.json` (nur lesen), `reels/verlauf.json`, `reels/credits.json`, `musik/README.md` und die letzten Notizen in `recherche/` lesen. In `freigegeben/` der Clips (lokal oder Google Drive) nach neuen Clips schauen.
 2. **Recherche** (5 Credits): genau 1 Aufruf `vidiq_instagram_tiktok_outlier_search` zu den Reel-Themen (gleiches `audienceQuery` wie in `AGENT.md`, `embeddingType` `hook` oder `format`, `durationMax` 30). Zusätzlich die Recherche-Notizen des Post-Agenten der Vorwoche lesen (gratis). Festhalten in `recherche/JJJJ-MM-TT-reels.md`: Aufhänger, Aufbau, Länge, Schnitt-Tempo, verwendete Sounds.
 3. **Wochenplan für 5 Reels**, dann pro Reel eine Datei `reels/JJJJ-MM/<id>.json`: Format, Aufhänger, Szenenliste mit Sekunden (Material, Text im Bild, Bewegung), Sprechertext, Musik (Trend-Sound-Kandidaten und Bibliotheks-Track), Bildtext, Hashtags, Postzeit. Titel, Aufhänger und Kernaussage dürfen weder in `reels/verlauf.json` noch in `posts/verlauf.json` stehen. Jedes Reel bekommt einen Sprechertext von höchstens rund 180 Zeichen (alle 5 zusammen höchstens 950). Gibt es eine echte Sprachaufnahme von Marlin oder Anil, hat sie Vorrang.
 4. **Ton bauen:** Die Sammel-Stimme für alle 5 Reels in einem Auftrag erzeugen, mit `vidiq_job_poll` abwarten, als `stimmen/JJJJ-MM-TT-woche.mp3` speichern und mit `werkzeug/stimme_teilen.py` in 5 Teile schneiden. Danach die Szenenlängen jedes Reels an die Pausen seines Teils anpassen. Musik aus `musik/` wählen, einen neuen Track nur nach der Budget-Regel oben.
 5. **Bildteile bauen** (bei reinen Foto-Reels erledigt das `reel.py`, dann direkt weiter mit 7):
-   - Text-Einblendungen und Untertitel als transparente PNGs (1080 × 1920) mit den Festbox-Schriften (Sora 700 für Titel, Figtree für Untertitel aus `C:/Dev/Festbox/public/assets/fonts/`). Am einfachsten wie in `werkzeug/render.py` als HTML mit Playwright rendern (`omit_background=True`).
+   - Text-Einblendungen und Untertitel als transparente PNGs (1080 × 1920) mit den Festbox-Schriften (Sora 700 für Titel, Figtree für Untertitel aus `<website>/public/assets/fonts/`). Am einfachsten wie in `werkzeug/render.py` als HTML mit Playwright rendern (`omit_background=True`).
    - Fotos bewegen: `ffmpeg -loop 1 -i foto.jpg -vf "scale=2160:-2,zoompan=z='min(zoom+0.0012,1.15)':d=<frames>:s=1080x1920:fps=30" -t <sek> szene.mp4`
    - Clips zuschneiden und ins Hochformat bringen: `ffmpeg -ss <start> -t <dauer> -i clip.mp4 -vf "scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,fps=30" -an szene.mp4`
    - Motion Graphics mit `vidiq_motion_graphics` (`outputPreset: "shorts-9-16"`), dann herunterladen.
@@ -120,7 +122,7 @@ Vorlage: `reels/2026-10/2026-10-test-preis.json` (von Marlin abgenommen). Felder
 12. **Metricool-Entwurf anlegen** (ein Aufruf pro Reel):
     `{"autoPublish": true, "draft": true, "descendants": [], "firstCommentText": "", "hasNotReadNotes": false, "media": ["<raw-URL .mp4>"], "videoThumbnailUrl": "<raw-URL -cover.jpg>", "mediaAltText": [], "providers": [{"network": "instagram"}, {"network": "facebook"}], "publicationDate": {"dateTime": "JJJJ-MM-TTTHH:MM:00", "timezone": "Europe/Zurich"}, "shortener": false, "smartLinkData": {"ids": []}, "text": "<Bildtext>", "instagramData": {"type": "REEL", "showReelOnFeed": true, "isAiGenerated": <true|false>, "audioConfiguration": {"audioId": "<Trend-Sound>", "audioVolume": <0-100>, "videoVolume": <0-100>}}, "facebookData": {"type": "REEL"}}`
     Ohne Trend-Sound `audioConfiguration` ganz weglassen. Prüfen, dass `"draft": true` zurückkommt.
-13. **Nachführen:** Reels in `reels/verlauf.json` eintragen (mit `"format": "reel"`, Datum, Zeit, Format-Typ, Aufhänger, Titel, Bildtext, Material, Musik, Stimme, Trend-Sound, metricool_id), `reels/credits.json` (Datum, Werkzeug, Credits) und `C:/Dev/Festbox-Clips/verwendet.json` aktualisieren. Committen («Reel-Verlauf nachgeführt»), pushen.
+13. **Nachführen:** Reels in `reels/verlauf.json` eintragen (mit `"format": "reel"`, Datum, Zeit, Format-Typ, Aufhänger, Titel, Bildtext, Material, Musik, Stimme, Trend-Sound, metricool_id), `reels/credits.json` (Datum, Werkzeug, Credits) und lokal `C:/Dev/Festbox-Clips/verwendet.json` aktualisieren (in der Cloud das Feld `clips` im Verlauf). Committen («Reel-Verlauf nachgeführt»), pushen.
 
 ## Abschluss
 

@@ -1,14 +1,16 @@
 """Rendert Festbox-Posts (1080 x 1350) aus einer JSON-Datei.
 
-Aufruf (mit dem Python aus der Bildwerkstatt, dort ist Playwright installiert):
+Aufruf lokal (Python aus der Bildwerkstatt, dort ist Playwright installiert):
   C:/Dev/Festbox/tools/bildwerkstatt/.venv/Scripts/python.exe -I werkzeug/render.py posts/2026-11/stapel.json
+In der Cloud nach werkzeug/cloud-setup.sh: python3 werkzeug/render.py posts/2026-11/stapel.json
 
 Schreibt pro Post <ordner>/<id>.jpg und eine Kontrollseite <ordner>/vorschau.html.
 Felder pro Post: siehe werkzeug/README.md.
 """
 import html, json, pathlib, sys
 
-FESTBOX = pathlib.Path("C:/Dev/Festbox")
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+from umgebung import FESTBOX, browser  # lokal C:/Dev/Festbox, in der Cloud ../festbox-website
 BILDER = FESTBOX / "public/assets/images"
 FONTS = FESTBOX / "public/assets/fonts"
 LOGO_HELL = FESTBOX / "grafiken/social-media/festbox-logo-dunkel-600.png"   # helle Schrift, für dunkle Flächen
@@ -150,7 +152,7 @@ def main():
     from playwright.sync_api import sync_playwright
     from PIL import Image
     with sync_playwright() as pw:
-        b = pw.chromium.launch(channel="chrome")
+        b = browser(pw)
         pg = b.new_page(viewport={"width": 1080, "height": 1400})
         pg.goto(out.as_uri())
         pg.wait_for_timeout(1000)

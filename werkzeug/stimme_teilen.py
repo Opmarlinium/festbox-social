@@ -6,12 +6,15 @@ Aufruf:
 Schreibt <praefix>1.mp3 ... <praefix>N.mp3 (in der Reihenfolge der Texte) und gibt die Länge jedes Teils aus.
 Bricht ab, wenn die Pausen zwischen den Texten nicht klar länger sind als die Pausen innerhalb der Texte.
 """
-import re, subprocess, sys
+import pathlib, re, subprocess, sys
+
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+from umgebung import FFMPEG
 
 
 def main():
     quelle, n, praefix = sys.argv[1], int(sys.argv[2]), sys.argv[3]
-    r = subprocess.run(["ffmpeg", "-i", quelle, "-af", "silencedetect=noise=-35dB:d=0.3", "-f", "null", "-"],
+    r = subprocess.run([FFMPEG, "-i", quelle, "-af", "silencedetect=noise=-35dB:d=0.3", "-f", "null", "-"],
                        capture_output=True, text=True)
     starts = [float(x) for x in re.findall(r"silence_start: ([\d.]+)", r.stderr)]
     ends = [float(x) for x in re.findall(r"silence_end: ([\d.]+)", r.stderr)]
@@ -31,7 +34,7 @@ def main():
     for i in range(n):
         a, b = anfang[i], ende[i]
         ziel = f"{praefix}{i + 1}.mp3"
-        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", quelle, "-ss", f"{a:.3f}", "-to", f"{b:.3f}",
+        subprocess.run([FFMPEG, "-y", "-loglevel", "error", "-i", quelle, "-ss", f"{a:.3f}", "-to", f"{b:.3f}",
                         "-c:a", "libmp3lame", "-b:a", "192k", ziel], check=True)
         print(f"{ziel}: {a:.2f} bis {b:.2f} s, Laenge {b - a:.2f} s")
 

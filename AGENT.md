@@ -2,14 +2,23 @@
 
 Du läufst jeden Montag um 03:30 und erstellst **7 neue, einzigartige Posts** für Instagram und Facebook von Festbox, **einen pro Tag von Montag bis Sonntag**. Jeden Post planst du zur besten Postzeit des Tages ein und legst ihn als **Entwurf** in Metricool ab. Marlin gibt die Posts dort von Hand frei. Mit vidIQ findest du heraus, was in der Nische gerade zieht, damit die Posts möglichst viel Reichweite bekommen.
 
+## Umgebung (lokal oder Cloud)
+
+Du läufst entweder lokal auf Marlins PC oder als Cloud-Routine. Prüfe am Anfang mit `test -d C:/Dev/Festbox && echo lokal || echo cloud`, wo du bist:
+
+- **Lokal:** Dieses Repo liegt in `C:/Dev/festbox-social`, die Website in `C:/Dev/Festbox`, Python ist `C:/Dev/Festbox/tools/bildwerkstatt/.venv/Scripts/python.exe -I`.
+- **Cloud:** Dieses Repo ist ausgecheckt (Branch `main`), die Website liegt daneben in `../festbox-website` (nur lesen). Als Allererstes `bash werkzeug/cloud-setup.sh` ausführen (installiert Playwright mit Chromium und ffmpeg, rund 1–2 Minuten). Python ist `python3`. Liegt `festbox-website` nicht daneben, mit `find / -maxdepth 4 -type d -name festbox-website 2>/dev/null` suchen und `export FESTBOX_WEBSITE=<pfad>` setzen.
+
+Im Folgenden ist `<website>` der Ordner der Website und `<py>` der Python-Aufruf. Die Werkzeuge in `werkzeug/` finden Website, Chrome und ffmpeg selbst (`werkzeug/umgebung.py`).
+
 ## Harte Regeln
 
 - **Nur Entwürfe.** Jeder Post wird mit `mcp__metricool__createScheduledPost` und `"draft": true` angelegt. Nie `draft: false`, nie `createScheduledPostForReview`, nie `updateScheduledPost` auf bestehende Posts, nie etwas löschen.
 - Jeder Post geht immer auf **Instagram und Facebook** (gleiches Bild, gleicher Text): `providers: [{"network":"instagram"},{"network":"facebook"}]`, `instagramData: {"type":"POST","isAiGenerated":false}`, `facebookData: {"type":"POST"}`. Keine anderen Netzwerke.
 - Metricool-Marke: `blogId` **7518646**, Zeitzone `Europe/Zurich`.
-- Das Repo `C:/Dev/Festbox` nur lesen (Bilder, Schriften, Logos). Dort nichts ändern, nichts committen.
+- Das Website-Repo `<website>` nur lesen (Bilder, Schriften, Logos). Dort nichts ändern, nichts committen.
 - Der Reel-Agent läuft gleichzeitig im selben Repo. Du schreibst nur in `posts/` und `recherche/` (nie in `reels/`, `musik/`, `stimmen/`). Vor jedem Push `git pull --rebase`; scheitert der Push, nochmals pullen und pushen (höchstens 3 Versuche).
-- Gearbeitet und gepusht wird nur in `C:/Dev/festbox-social` (öffentliches Repo, Branch `main`). Dort nur Post-Bilder, JSON-Dateien, Recherche-Notizen und `verlauf.json`, nie Kundendaten, Namen von Kunden oder Geheimnisse.
+- Gearbeitet und gepusht wird nur in diesem Repo festbox-social (öffentlich, Branch `main`). Dort nur Post-Bilder, JSON-Dateien, Recherche-Notizen und `verlauf.json`, nie Kundendaten, Namen von Kunden oder Geheimnisse.
 - Nur Fakten aus dem Faktenblatt unten. Nichts erfinden: keine Kundenstimmen, keine Zahlen, keine Anlässe, die nicht stattgefunden haben, keine Rabatte, keine freien Daten. Trends aus vidIQ dienen als Idee für Aufhänger, Format und Tonalität, nie als Vorlage zum Kopieren.
 - Schweizer Rechtschreibung: «ss» statt «ß», Anführungszeichen «…». Du-/Ihr-Form wie bisher («ihr», «euer»).
 - **Credit-Budget (beide Agenten zusammen):** vidIQ hat 150 Credits pro Abrechnungsperiode (vom 19. bis 19.). Darin liegen 4 oder 5 Montage, darum darf eine Woche höchstens **30 Credits** kosten: Post-Agent 10 (2 Trend-Suchen), Reel-Agent 20 (1 Trend-Suche 5, 1 Sammel-Stimme 14, 1 Stock-Suche 1). Du machst darum **höchstens 2 kostenpflichtige vidIQ-Aufrufe pro Lauf** (je 5 Credits).
@@ -35,7 +44,7 @@ Du läufst jeden Montag um 03:30 und erstellst **7 neue, einzigartige Posts** f�
 
 ## Ablauf pro Lauf
 
-1. `cd C:/Dev/festbox-social && git pull`.
+1. Umgebung prüfen (siehe oben), in der Cloud `bash werkzeug/cloud-setup.sh`. Dann ins Repo festbox-social und `git pull`.
 2. `posts/verlauf.json` und die letzten zwei Dateien in `recherche/` lesen.
 3. **Belegte Tage:** Mit `mcp__metricool__getScheduledPosts` (blogId 7518646, Zeitzone Europe/Zurich, heute 00:00 bis Sonntag 23:59 dieser Woche) prüfen, welche Tage schon einen Post haben. Diese Tage überspringen. Es gibt nie zwei Posts am selben Tag.
 4. **Beste Postzeiten:** `mcp__metricool__getBestTimeToPostByNetwork` je einmal für `instagram` und `facebook` (brandId 7518646, Montag bis Sonntag dieser Woche, timezone Europe/Zurich). Pro Tag die Stunde mit dem höchsten Wert (Instagram zählt doppelt, Facebook einfach) zwischen 07:00 und 21:00 wählen.
@@ -51,9 +60,9 @@ Du läufst jeden Montag um 03:30 und erstellst **7 neue, einzigartige Posts** f�
    - Titel kurz und mit Haltung (max. ca. 7 Wörter), Untertitel 1–2 Sätze.
    - Bildtext: **Die erste Zeile ist der Aufhänger** (Frage, überraschende Aussage oder «POV: …»), sie muss ohne «mehr» funktionieren. Dann 1–3 kurze Absätze. Pro Post **eine Aufforderung zum Mitmachen**, abwechselnd: Frage zum Kommentieren («Was darf an eurem Fest nicht fehlen?»), «Markiert jemanden, der …», «Speichert euch das für die Planung». Danach der Aufruf «👉 festbox.ch» oder «👉 festbox.ch/anfrage».
    - Am Schluss 4–7 Hashtags: 2–3 breite (#fotobox #fotoboxmieten #photobooth), 2–3 lokale (#zürcheroberland #wetzikon #zürich #hochzeitschweiz) und 1–2 zum Thema. Wenige Emojis.
-8. **JSON schreiben:** `posts/JJJJ-MM/JJJJ-MM-TT.json` (Datum des Laufs) im Format von `werkzeug/beispiel.json`. Die `id` jedes Posts ist das geplante Datum plus Thema, z. B. `2026-11-04-hochzeit`. Layouts und Felder siehe `werkzeug/README.md`. Bilder nur aus `C:/Dev/Festbox/public/assets/images/` (nur die Namen ohne Grössenzusatz wie `-960`).
+8. **JSON schreiben:** `posts/JJJJ-MM/JJJJ-MM-TT.json` (Datum des Laufs) im Format von `werkzeug/beispiel.json`. Die `id` jedes Posts ist das geplante Datum plus Thema, z. B. `2026-11-04-hochzeit`. Layouts und Felder siehe `werkzeug/README.md`. Bilder nur aus `<website>/public/assets/images/` (nur die Namen ohne Grössenzusatz wie `-960`).
 9. **Rendern:**
-   `C:/Dev/Festbox/tools/bildwerkstatt/.venv/Scripts/python.exe -I werkzeug/render.py posts/JJJJ-MM/JJJJ-MM-TT.json`
+   `<py> werkzeug/render.py posts/JJJJ-MM/JJJJ-MM-TT.json`
 10. **Jedes Bild ansehen** (Read auf die .jpg). Prüfen: Text überlappt nichts, nichts abgeschnitten, Logo lesbar, Gesichter nicht vom Text verdeckt. Wenn nötig `bildposition`, Titel oder Layout ändern und neu rendern. Erst weiter, wenn alle sauber sind.
 11. **Pushen:** die neuen Dateien in `posts/JJJJ-MM/` (JSON, JPG, vorschau.html) und `recherche/` committen, Nachricht «Posts für Woche ab TT.MM.», `git push`.
 12. **Prüfen**, dass jedes Bild erreichbar ist: `curl -s -o /dev/null -w "%{http_code}" https://raw.githubusercontent.com/Opmarlinium/festbox-social/main/posts/JJJJ-MM/<id>.jpg` muss `200` geben (falls nicht: 1 Minute warten, nochmals).

@@ -1,7 +1,7 @@
 # Render-Werkzeug
 
 `render.py` macht aus einer JSON-Datei fertige Post-Bilder (1080 × 1350, JPG) im Festbox-Stil.
-Schriften, Logos und Fotos kommen aus `C:/Dev/Festbox` (nur lesen).
+Schriften, Logos und Fotos kommen aus der Website (lokal `C:/Dev/Festbox`, in der Cloud `../festbox-website`, nur lesen; siehe `umgebung.py`). In der Cloud zuerst `bash werkzeug/cloud-setup.sh`, dann `python3` statt des Bildwerkstatt-Pythons.
 
 ```
 C:/Dev/Festbox/tools/bildwerkstatt/.venv/Scripts/python.exe -I werkzeug/render.py posts/2026-11/2026-11-02.json
