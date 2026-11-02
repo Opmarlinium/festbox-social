@@ -1,0 +1,99 @@
+{
+  "posts": [
+    {
+      "id": "post-2026-11-04-zusaetze",
+      "layout": "liste",
+      "titel": "Die Box ist gesetzt.\n*Und dazu?*",
+      "zeilen": [
+        {
+          "kurz": "D",
+          "titel": "Drucke",
+          "text": "100 Stück CHF 59 · 200 Stück CHF 99",
+          "wert": "59",
+          "einheit": "ab CHF"
+        },
+        {
+          "kurz": "G",
+          "titel": "Gästebuch",
+          "text": "Erinnerungen und Glückwünsche in einem Buch",
+          "wert": "59",
+          "einheit": "CHF"
+        },
+        {
+          "kurz": "R",
+          "titel": "Requisiten & Hintergrund",
+          "text": "Requisiten ab CHF 39, Hintergrund ab CHF 149",
+          "wert": "39",
+          "einheit": "ab CHF"
+        }
+      ],
+      "fuss": [
+        "festbox.ch/anfrage",
+        "Anfahrt bis 20 km inklusive"
+      ]
+    },
+    {
+      "id": "post-2026-11-05-team",
+      "layout": "zitat",
+      "titel": "Zwei aus dem Oberland.\n*Eine Box.*",
+      "text": "Marlin aus Pfäffikon ZH und Anil aus Wetzikon bringen die Fotobox an euer Fest.",
+      "bild": "team-marlin.webp",
+      "bildposition": "50% 30%",
+      "fuss": [
+        "festbox.ch",
+        "Zürcher Oberland"
+      ]
+    },
+    {
+      "id": "post-2026-11-06-party",
+      "layout": "foto",
+      "bild": "party-goldvorhang.webp",
+      "bildposition": "50% 25%",
+      "tag": "Unlimitierte Fotos",
+      "titel": "Fotos zählen?\n*Nicht bei uns.*",
+      "text": "Mythos: Pro Person gibt's ein, zwei Bilder. Wahrheit: Die Box zählt nicht mit.",
+      "fuss": [
+        "festbox.ch",
+        "Zürcher Oberland"
+      ]
+    },
+    {
+      "id": "post-2026-11-07-hochzeit",
+      "layout": "panel",
+      "bild": "hochzeit-blumenrahmen.webp",
+      "bildposition": "50% 15%",
+      "tag": "Hochzeit",
+      "titel": "Fotograf für euch.\n*Box für die Gäste.*",
+      "text": "Unlimitierte Fotos, im Layout mit euren Namen.",
+      "fuss": [
+        "festbox.ch",
+        "Offerte innert 24 h"
+      ],
+      "polaroid": "hochzeit-gruppe.webp",
+      "polaroid_text": "Alle aufs Bild 💛"
+    },
+    {
+      "id": "post-2026-11-08-weihnachtsessen",
+      "layout": "schritte",
+      "titel": "Checkliste fürs\n*Team-Znacht.*",
+      "schritte": [
+        {
+          "titel": "Datum anfragen",
+          "text": "Auf festbox.ch/anfrage. Die Offerte kommt innert 24 Stunden."
+        },
+        {
+          "titel": "Logo schicken",
+          "text": "Euer Firmenlogo kommt aufs Foto-Layout. Ist immer dabei."
+        },
+        {
+          "titel": "Anstossen",
+          "text": "Fotos per QR aufs Handy, Online-Galerie innert 48 Stunden."
+        }
+      ],
+      "fuss": [
+        "festbox.ch/anfrage",
+        "Zürcher Oberland"
+      ]
+    }
+  ]
+}
