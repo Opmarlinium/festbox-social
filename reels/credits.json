@@ -24,6 +24,24 @@
       "werkzeug": "keine",
       "credits": 0,
       "zweck": "Woche ab 26.10.: Guthaben 101, Reset 19.11., 4 Montage x 30 = 120 nötig. Nach Budget-Regel Stock, Trend-Suche und Stimme weggelassen"
+    },
+    {
+      "datum": "2026-11-02",
+      "werkzeug": "vidiq_instagram_tiktok_outlier_search",
+      "credits": 5,
+      "zweck": "Reel-Recherche Woche ab 02.11."
+    },
+    {
+      "datum": "2026-11-02",
+      "werkzeug": "vidiq_voiceover_generate",
+      "credits": 14,
+      "zweck": "Sammel-Stimme Laura, 907 Zeichen (nicht teilbar, nicht verwendet)"
+    },
+    {
+      "datum": "2026-11-02",
+      "werkzeug": "vidiq_generate_broll",
+      "credits": 1,
+      "zweck": "Stock Feuerwerk (Pexels, daniel Iakobovszky) für Silvester-Reel"
     }
   ]
 }

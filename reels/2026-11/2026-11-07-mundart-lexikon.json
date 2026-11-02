@@ -1,0 +1,58 @@
+{
+ "id": "2026-11-07-mundart-lexikon",
+ "format": "Mini-Lexikon (Mundart, Schweizer Bezug)",
+ "datum": "2026-11-07",
+ "zeit": "13:00",
+ "thema": "Anlässe/Schweizer Bezug",
+ "musik": "../../musik/party-upbeat-122bpm.mp3",
+ "logo": true,
+ "sound_kandidaten": [
+  "079 Lo & Leduc",
+  "Ewigi Liebi Mash",
+  "Hippie-Bus Bligg"
+ ],
+ "szenen": [
+  {
+   "bild": "kostuemparty.webp",
+   "dauer": 2.4,
+   "bewegung": "zoom-in",
+   "oben": "Kleines Fest-Lexikon *auf Mundart*"
+  },
+  {
+   "bild": "paar-geburtstag.webp",
+   "dauer": 2.0,
+   "bewegung": "pan-rechts",
+   "marke": "Geburi",
+   "klein": "= Geburtstag"
+  },
+  {
+   "bild": "freunde-anstossen.webp",
+   "dauer": 2.0,
+   "bewegung": "zoom-out",
+   "marke": "Znacht",
+   "klein": "= Abendessen"
+  },
+  {
+   "bild": "layout-hochzeit-querformat.webp",
+   "dauer": 2.0,
+   "bewegung": "zoom-in",
+   "marke": "Hochziit",
+   "klein": "= Hochzeit"
+  },
+  {
+   "bild": "fotostreifen-hand.webp",
+   "dauer": 2.4,
+   "bewegung": "pan-links",
+   "marke": "Fotobox",
+   "klein": "= Fotobox.\nHeisst überall gleich."
+  },
+  {
+   "bild": "jga-konfetti.webp",
+   "dauer": 2.2,
+   "bewegung": "zoom-out",
+   "oben": "Welches Wort *fehlt noch?*",
+   "unten": "👉 festbox.ch/anfrage"
+  }
+ ],
+ "bildtext": "Geburi, Znacht, Hochziit: Bei uns im Oberland klingt jedes Fest ein bisschen anders 🇨🇭\n\nNur ein Wort bleibt überall gleich: Fotobox. Ob am Geburi, beim Znacht mit dem Verein oder an der Hochziit.\n\nWelches Mundart-Wort gehört noch ins Fest-Lexikon? Schreibt es in die Kommentare 👇\n👉 festbox.ch/anfrage\n\n#fotobox #fotoboxmieten #photobooth #zürcheroberland #zürich #mundart"
+}

@@ -1,0 +1,57 @@
+{
+ "id": "2026-11-05-hochzeit-stationen-ig",
+ "format": "Stationen eines Fotos (Ablauf nummeriert)",
+ "datum": "2026-11-05",
+ "zeit": "18:00",
+ "thema": "Hochzeit",
+ "logo": true,
+ "sound_kandidaten": [
+  "Perfect Ed Sheeran",
+  "Thinking Out Loud Ed Sheeran",
+  "Yellow Coldplay"
+ ],
+ "szenen": [
+  {
+   "bild": "hochzeit-gruppe.webp",
+   "dauer": 2.4,
+   "bewegung": "zoom-in",
+   "oben": "Ein Hochzeitsfoto in *4 Stationen*"
+  },
+  {
+   "bild": "fotobox-wohnzimmer.webp",
+   "dauer": 2.0,
+   "bewegung": "pan-rechts",
+   "gross": "1",
+   "klein": "Alle vor die Box"
+  },
+  {
+   "bild": "layout-hochzeit-hochformat.webp",
+   "dauer": 2.0,
+   "bewegung": "zoom-out",
+   "gross": "2",
+   "klein": "Eure Namen\nauf dem Layout"
+  },
+  {
+   "bild": "sofortbild-requisite.webp",
+   "dauer": 2.0,
+   "bewegung": "zoom-in",
+   "gross": "3",
+   "klein": "Per QR-Code\naufs Handy"
+  },
+  {
+   "bild": "hochzeit-sofortbilder-leiter.webp",
+   "dauer": 2.0,
+   "bewegung": "pan-links",
+   "gross": "4",
+   "klein": "Online-Galerie\ninnert 48 Stunden"
+  },
+  {
+   "bild": "hero-fotobox-1200.webp",
+   "dauer": 2.2,
+   "bewegung": "zoom-out",
+   "oben": "Speichert euch das *für die Planung*",
+   "unten": "👉 festbox.ch/anfrage"
+  }
+ ],
+ "bildtext": "Vom Klick bis in die Galerie: Das passiert mit jedem Foto an eurer Hochzeit 💍\n\nDie Gäste stellen sich vor die Box, auf jedem Bild stehen eure Namen, jeder holt sich die Fotos per QR-Code aufs Handy, und innert 48 Stunden steht die Online-Galerie.\n\nSpeichert euch das für die Hochzeitsplanung und schickt es eurer Trauzeugin oder eurem Trauzeugen.\n👉 festbox.ch/anfrage\n\n#fotobox #fotoboxmieten #photobooth #hochzeitschweiz #hochzeit #zürcheroberland"
+}

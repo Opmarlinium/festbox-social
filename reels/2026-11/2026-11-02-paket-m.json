@@ -1,0 +1,65 @@
+{
+ "id": "2026-11-02-paket-m",
+ "format": "Was steckt drin? (Paket aufgeschlüsselt)",
+ "datum": "2026-11-02",
+ "zeit": "17:00",
+ "thema": "Pakete",
+ "musik": "../../musik/party-upbeat-122bpm.mp3",
+ "logo": true,
+ "sound_kandidaten": [
+  "Dance The Night Dua Lipa",
+  "Levitating Dua Lipa",
+  "Physical Dua Lipa"
+ ],
+ "szenen": [
+  {
+   "bild": "fotobox-festbox-stativ-softbox-1440.webp",
+   "dauer": 2.2,
+   "bewegung": "zoom-in",
+   "oben": "Was steckt in *590 Franken?*"
+  },
+  {
+   "bild": "fotobox-aufgebaut.webp",
+   "dauer": 2.2,
+   "bewegung": "pan-rechts",
+   "marke": "Paket M",
+   "klein": "Wir liefern die Box.\nAnfahrt bis 20 km inklusive."
+  },
+  {
+   "bild": "gruppe-jubel.webp",
+   "dauer": 2.0,
+   "bewegung": "zoom-in",
+   "marke": "Unlimitiert",
+   "klein": "Digitale Fotos ohne Limit"
+  },
+  {
+   "bild": "freundinnen-sekt.webp",
+   "dauer": 2.0,
+   "bewegung": "zoom-out",
+   "marke": "QR-Code",
+   "klein": "Jeder hat seine Fotos\nsofort auf dem Handy"
+  },
+  {
+   "bild": "hero-gruppe-party.webp",
+   "dauer": 2.0,
+   "bewegung": "pan-links",
+   "marke": "Online-Galerie",
+   "klein": "Innert 48 Stunden"
+  },
+  {
+   "bild": "layout-firmen-logo.webp",
+   "dauer": 2.2,
+   "bewegung": "zoom-in",
+   "marke": "Euer Layout",
+   "klein": "Mit Firmenlogo oder\nNamen des Brautpaars"
+  },
+  {
+   "bild": "fotobox-nahaufnahme.webp",
+   "dauer": 2.2,
+   "bewegung": "zoom-out",
+   "oben": "Was ist euch *am wichtigsten?*",
+   "unten": "👉 festbox.ch/anfrage"
+  }
+ ],
+ "bildtext": "590 Franken für eine Fotobox. Und was bekommt ihr dafür? 👀\n\nPaket M ist unser beliebtestes: Wir liefern die Box, die Anfahrt ist bis 20 km Luftlinie ab Bahnhof Wetzikon inklusive. Dazu unlimitierte digitale Fotos, QR-Download aufs Handy, die Online-Galerie innert 48 Stunden und euer eigenes Foto-Layout.\n\nWas wäre euch am wichtigsten? Schreibt es in die Kommentare 👇\n👉 festbox.ch/anfrage\n\n#fotobox #fotoboxmieten #photobooth #zürcheroberland #zürich #fotoboxpreis"
+}

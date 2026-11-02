@@ -1,0 +1,51 @@
+{
+ "id": "2026-11-04-silvester-countdown-ig",
+ "format": "Countdown (Saison)",
+ "datum": "2026-11-04",
+ "zeit": "16:00",
+ "thema": "Silvester",
+ "logo": true,
+ "sound_kandidaten": [
+  "I Gotta Feeling Black Eyed Peas",
+  "Celebration Kool & The Gang",
+  "Good Feeling Flo Rida"
+ ],
+ "szenen": [
+  {
+   "clip": "../_clips/stock/fireworks-iakobovszky.mp4",
+   "start": 1,
+   "dauer": 2.2,
+   "oben": "Noch *57 Tage* bis Silvester",
+   "gross": "57"
+  },
+  {
+   "bild": "freundinnen-partyhuete.webp",
+   "dauer": 2.0,
+   "bewegung": "zoom-in",
+   "marke": "Party geplant?",
+   "klein": "Dann fehlt nur noch\ndie Fotobox."
+  },
+  {
+   "bild": "party-huete-silbervorhang.webp",
+   "dauer": 2.0,
+   "bewegung": "pan-rechts",
+   "marke": "Jetzt anfragen",
+   "klein": "Offerte innert 24 Stunden"
+  },
+  {
+   "clip": "../_clips/stock/fireworks-iakobovszky.mp4",
+   "start": 8,
+   "dauer": 2.0,
+   "marke": "Ganz entspannt",
+   "klein": "Bezahlt wird erst\nnach Annahme der Offerte."
+  },
+  {
+   "clip": "../_clips/stock/fireworks-iakobovszky.mp4",
+   "start": 14,
+   "dauer": 2.2,
+   "oben": "Wo feiert ihr *Silvester?*",
+   "unten": "👉 festbox.ch/anfrage"
+  }
+ ],
+ "bildtext": "Noch 57 Tage, dann knallen die Korken 🎆\n\nWer an Silvester feiert, plant jetzt. Schickt uns eure Anfrage: Die Offerte kommt innert 24 Stunden, und bezahlt wird erst, wenn ihr sie annehmt.\n\nWo feiert ihr dieses Jahr Silvester? Verratet es uns in den Kommentaren 👇\n👉 festbox.ch/anfrage\n\n#fotobox #fotoboxmieten #photobooth #silvester #silvesterparty #zürcheroberland #zürich\n\nVideo: daniel Iakobovszky / Pexels"
+}

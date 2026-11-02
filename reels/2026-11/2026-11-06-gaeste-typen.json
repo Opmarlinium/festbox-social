@@ -1,0 +1,58 @@
+{
+ "id": "2026-11-06-gaeste-typen",
+ "format": "Typen-Liste (Charaktere am Fest)",
+ "datum": "2026-11-06",
+ "zeit": "13:00",
+ "thema": "Stimmung/Party",
+ "musik": "../../musik/party-upbeat-122bpm.mp3",
+ "logo": true,
+ "sound_kandidaten": [
+  "Shut Up and Dance Walk The Moon",
+  "Dancing Queen ABBA",
+  "Uptown Funk Mark Ronson"
+ ],
+ "szenen": [
+  {
+   "bild": "gruppe-requisiten-sofa.webp",
+   "dauer": 2.4,
+   "bewegung": "zoom-in",
+   "oben": "Diese *4 Gäste* gibt's an jedem Fest"
+  },
+  {
+   "bild": "freundinnen-polizeimuetze.webp",
+   "dauer": 2.2,
+   "bewegung": "pan-rechts",
+   "marke": "Die Requisiten-Fee",
+   "klein": "Hat schon die dritte\nMütze auf."
+  },
+  {
+   "bild": "gast-partyhut.webp",
+   "dauer": 2.2,
+   "bewegung": "zoom-out",
+   "marke": "Der Dauergast",
+   "klein": "Posiert zum zehnten Mal.\nZum Glück: unlimitiert."
+  },
+  {
+   "bild": "firmenfeier-anstossen.webp",
+   "dauer": 2.2,
+   "bewegung": "zoom-in",
+   "marke": "Die Schnelle",
+   "klein": "Hat das Foto per QR\nschon geteilt."
+  },
+  {
+   "bild": "geburtstag-gelb-requisiten.webp",
+   "dauer": 2.2,
+   "bewegung": "pan-links",
+   "marke": "Der Scheue",
+   "klein": "Wollte nicht.\nIst auf jedem Bild."
+  },
+  {
+   "bild": "freunde-bar.webp",
+   "dauer": 2.2,
+   "bewegung": "zoom-out",
+   "oben": "Wer von euch *ist wer?*",
+   "unten": "👉 festbox.ch/anfrage"
+  }
+ ],
+ "bildtext": "Jedes Fest hat sie: die vier Typen an der Fotobox 😂\n\nDie Requisiten-Fee, der Dauergast, die Schnellste beim Teilen und der Scheue, der am Ende trotzdem auf jedem Bild ist. Die digitalen Fotos sind bei uns unlimitiert, und jeder holt sie sich per QR-Code aufs Handy.\n\nMarkiert die Person, die bei euch der Dauergast ist 👇\n👉 festbox.ch/anfrage\n\n#fotobox #fotoboxmieten #photobooth #party #zürcheroberland #zürich"
+}
