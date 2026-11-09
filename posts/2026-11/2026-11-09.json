@@ -1,0 +1,77 @@
+{
+  "posts": [
+    {
+      "id": "post-2026-11-09-tipps",
+      "layout": "schritte",
+      "titel": "So wird die Box zum *Treffpunkt.*",
+      "schritte": [
+        {"titel": "Selber anfangen", "text": "Gastgeber machen das erste Foto. Danach traut sich jeder."},
+        {"titel": "Requisiten bereitlegen", "text": "Hüte und Brillen gleich neben die Box, nicht in die Kiste."},
+        {"titel": "QR-Code zeigen", "text": "Wer weiss, dass die Fotos aufs Handy kommen, kommt wieder."}
+      ],
+      "fuss": ["festbox.ch", "Tipps für Gastgeber"]
+    },
+    {
+      "id": "post-2026-11-10-pakete",
+      "layout": "liste",
+      "titel": "Welches Paket\n*passt zu euch?*",
+      "zeilen": [
+        {"kurz": "S", "titel": "Ihr packt gern selber an", "text": "Selbstabholung, Box abholen und aufstellen", "wert": "349", "einheit": "CHF"},
+        {"kurz": "M", "titel": "Ihr wollt nicht fahren", "text": "Wir liefern die Box · am beliebtesten", "wert": "590", "einheit": "CHF", "hervorheben": true},
+        {"kurz": "L", "titel": "Ihr wollt Betreuung", "text": "Jemand von uns ist am Fest dabei", "wert": "Offerte", "einheit": "auf Anfrage"}
+      ],
+      "text": "In jedem Paket: unlimitierte digitale Fotos, QR-Download, Online-Galerie innert 48 h und euer Foto-Layout.",
+      "fuss": ["festbox.ch/anfrage", "Offerte innert 24 h"]
+    },
+    {
+      "id": "post-2026-11-11-firmenfest",
+      "layout": "foto",
+      "bild": "firmen-gruppe-jubel.webp",
+      "bildposition": "50% 35%",
+      "tag": "Firmenfest",
+      "titel": "Marketing, IT, Buchhaltung.\n*Ein Foto.*",
+      "text": "In der Fotobox steht plötzlich zusammen, wer sich sonst nur im Lift sieht.",
+      "fuss": ["festbox.ch", "Mit eurem Firmenlogo"]
+    },
+    {
+      "id": "post-2026-11-12-team",
+      "layout": "zitat",
+      "titel": "Grüezi aus *Wetzikon*, ich bin Anil.",
+      "text": "Die eine Hälfte von Festbox. Die andere ist Marlin aus Pfäffikon ZH.",
+      "bild": "team-anil.webp",
+      "bildposition": "50% 30%",
+      "fuss": ["festbox.ch", "Zürcher Oberland"]
+    },
+    {
+      "id": "post-2026-11-13-party",
+      "layout": "panel",
+      "bild": "freundinnen-partyhuete.webp",
+      "bildposition": "50% 35%",
+      "polaroid": "fotostreifen-hand.webp",
+      "polaroid_text": "Glück gehabt 🍀",
+      "tag": "Freitag, der 13.",
+      "titel": "Pech? Heute nur ohne Foto.",
+      "text": "Wer an der Party nicht in die Box steht, verpasst das Beste vom Abend.",
+      "fuss": ["festbox.ch", "Zürcher Oberland"]
+    },
+    {
+      "id": "post-2026-11-14-geburtstag",
+      "layout": "foto",
+      "bild": "geburtstag-gelb-requisiten.webp",
+      "bildposition": "50% 40%",
+      "tag": "Geburi",
+      "titel": "Zu viel für einen Geburi?\n*Genau richtig.*",
+      "text": "Ein bisschen übertrieben ist an einem Geburtstag genau das richtige Mass.",
+      "fuss": ["festbox.ch", "Zürcher Oberland"]
+    },
+    {
+      "id": "post-2026-11-15-silvester",
+      "layout": "zitat",
+      "titel": "Mit wem macht ihr das erste Foto von *2027?*",
+      "text": "Um Mitternacht in die Box, per QR-Code direkt aufs Handy.",
+      "bild": "party-huete-silbervorhang.webp",
+      "bildposition": "50% 40%",
+      "fuss": ["festbox.ch/anfrage", "Silvester 2026"]
+    }
+  ]
+}
