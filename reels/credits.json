@@ -42,6 +42,24 @@
       "werkzeug": "vidiq_generate_broll",
       "credits": 1,
       "zweck": "Stock Feuerwerk (Pexels, daniel Iakobovszky) für Silvester-Reel"
+    },
+    {
+      "datum": "2026-11-09",
+      "werkzeug": "vidiq_instagram_tiktok_outlier_search",
+      "credits": 5,
+      "zweck": "Reel-Recherche Woche ab 09.11."
+    },
+    {
+      "datum": "2026-11-09",
+      "werkzeug": "vidiq_generate_broll",
+      "credits": 1,
+      "zweck": "Stock Weihnachtslichter (Pexels, Uriel Mont) für Weihnachtsessen-Reel"
+    },
+    {
+      "datum": "2026-11-09",
+      "werkzeug": "keine Stimme",
+      "credits": 0,
+      "zweck": "Guthaben 51 vor Reel-Teil, Reset 19.11., 30 für 16.11. reserviert. voiceover_generate kostet neu 28 pro 1000 Zeichen, passt nicht ins Budget. Reels ohne Stimme. Stand danach 45."
     }
   ]
 }
