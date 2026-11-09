@@ -1,0 +1,53 @@
+{
+ "id": "2026-11-11-hochzeit-galerie-pov-ig",
+ "format": "POV-Montage (Trend)",
+ "datum": "2026-11-11",
+ "zeit": "16:00",
+ "thema": "Hochzeit",
+ "logo": true,
+ "sound_kandidaten": [
+  "Perfect Ed Sheeran",
+  "Marry You Bruno Mars",
+  "A Thousand Years Christina Perri"
+ ],
+ "szenen": [
+  {
+   "bild": "hochzeit-blumenrahmen.webp",
+   "dauer": 1.9,
+   "bewegung": "zoom-in",
+   "oben": "POV: Eure *Hochzeitsgalerie* ist online"
+  },
+  {
+   "bild": "layout-hochzeit-streifen.webp",
+   "dauer": 1.7,
+   "bewegung": "pan-links",
+   "klein": "Innert 48 Stunden\nnach dem Fest."
+  },
+  {
+   "bild": "hochzeit-gruppe.webp",
+   "dauer": 1.7,
+   "bewegung": "zoom-out",
+   "klein": "Und plötzlich seht ihr …"
+  },
+  {
+   "bild": "layout-hochzeit-hochformat.webp",
+   "dauer": 1.7,
+   "bewegung": "zoom-in",
+   "klein": "… euer Fest durch die\nAugen eurer Gäste."
+  },
+  {
+   "bild": "layout-hochzeit-querformat.webp",
+   "dauer": 1.8,
+   "bewegung": "pan-rechts",
+   "marke": "Mit euren Namen drauf"
+  },
+  {
+   "bild": "hochzeit-blumenrahmen.webp",
+   "dauer": 2.2,
+   "bewegung": "zoom-out",
+   "oben": "Welches Foto schaut ihr *zuerst* an?",
+   "unten": "👉 festbox.ch/anfrage"
+  }
+ ],
+ "bildtext": "Der Moment, wenn ihr eure Hochzeit zum ersten Mal durch die Augen eurer Gäste seht 💍\n\nInnert 48 Stunden steht die Online-Galerie mit allen Fotos aus der Fotobox, jedes im eigenen Layout mit euren Namen.\n\nMarkiert die Person, mit der ihr die Galerie als Erstes durchklicken würdet 👇\n👉 festbox.ch/anfrage\n\n#fotobox #fotoboxmieten #photobooth #hochzeitschweiz #hochzeit #zürcheroberland"
+}

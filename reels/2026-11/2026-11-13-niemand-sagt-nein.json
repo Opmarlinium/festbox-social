@@ -1,0 +1,54 @@
+{
+ "id": "2026-11-13-niemand-sagt-nein",
+ "format": "Statement-Loop (Trend)",
+ "datum": "2026-11-13",
+ "zeit": "13:00",
+ "thema": "Stimmung/Party",
+ "musik": "../../musik/party-upbeat-122bpm.mp3",
+ "logo": true,
+ "sound_kandidaten": [
+  "Levitating Dua Lipa",
+  "Dance The Night Dua Lipa",
+  "Get Your Attention"
+ ],
+ "szenen": [
+  {
+   "bild": "hero-gruppe-party.webp",
+   "dauer": 1.6,
+   "bewegung": "zoom-in",
+   "oben": "Zu einer Fotobox sagt *niemand* Nein"
+  },
+  {
+   "bild": "gruppe-jubel.webp",
+   "dauer": 1.3,
+   "bewegung": "pan-links",
+   "oben": "Zu einer Fotobox sagt *niemand* Nein"
+  },
+  {
+   "bild": "kostuemparty.webp",
+   "dauer": 1.3,
+   "bewegung": "zoom-out",
+   "oben": "Zu einer Fotobox sagt *niemand* Nein"
+  },
+  {
+   "bild": "paar-silvester.webp",
+   "dauer": 1.3,
+   "bewegung": "pan-rechts",
+   "oben": "Zu einer Fotobox sagt *niemand* Nein"
+  },
+  {
+   "bild": "gast-partyhut.webp",
+   "dauer": 1.3,
+   "bewegung": "zoom-in",
+   "oben": "Zu einer Fotobox sagt *niemand* Nein"
+  },
+  {
+   "bild": "hero-gruppe-party.webp",
+   "dauer": 1.6,
+   "bewegung": "zoom-out",
+   "oben": "Oder kennt ihr *jemanden?*",
+   "unten": "👉 festbox.ch/anfrage"
+  }
+ ],
+ "bildtext": "Habt ihr schon einmal jemanden gesehen, der an einem Fest an der Fotobox vorbeigeht? 😄\n\nErst schaut man nur zu, dann steht man doch mit Hut und Brille davor. Die digitalen Fotos sind unlimitiert, also darf es auch das zehnte Bild sein.\n\nGibt es bei euch jemanden, der Nein sagen würde? Ab in die Kommentare 👇\n👉 festbox.ch/anfrage\n\n#fotobox #fotoboxmieten #photobooth #party #zürcheroberland #zürich"
+}

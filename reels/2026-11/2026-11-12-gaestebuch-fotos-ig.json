@@ -1,0 +1,57 @@
+{
+ "id": "2026-11-12-gaestebuch-fotos-ig",
+ "format": "Trend-Format: Gästebuch zum Mitmachen",
+ "datum": "2026-11-12",
+ "zeit": "18:00",
+ "thema": "Zusätze/Gästebuch",
+ "logo": true,
+ "sound_kandidaten": [
+  "Photograph Ed Sheeran",
+  "I'm Gonna Be (500 Miles) Sleeping At Last",
+  "Golden Hour JVKE"
+ ],
+ "szenen": [
+  {
+   "bild": "hochzeit-sofortbilder-leiter.webp",
+   "dauer": 2.1,
+   "bewegung": "zoom-in",
+   "oben": "Unterschriften? Wir kleben *Fotos* ein."
+  },
+  {
+   "bild": "fotostreifen-film.webp",
+   "dauer": 1.8,
+   "bewegung": "pan-rechts",
+   "marke": "1",
+   "klein": "Foto machen."
+  },
+  {
+   "bild": "fotostreifen-hand.webp",
+   "dauer": 1.8,
+   "bewegung": "zoom-out",
+   "marke": "2",
+   "klein": "Druck mitnehmen."
+  },
+  {
+   "bild": "sofortbild-requisite.webp",
+   "dauer": 1.8,
+   "bewegung": "zoom-in",
+   "marke": "3",
+   "klein": "Einkleben,\nGruss dazu."
+  },
+  {
+   "bild": "paar-geburtstag.webp",
+   "dauer": 2.0,
+   "bewegung": "pan-links",
+   "marke": "Gästebuch CHF 59",
+   "klein": "100 Drucke CHF 59"
+  },
+  {
+   "bild": "hochzeit-sofortbilder-leiter.webp",
+   "dauer": 2.2,
+   "bewegung": "zoom-out",
+   "oben": "Wer schreibt bei euch den *lustigsten* Gruss?",
+   "unten": "👉 festbox.ch/anfrage"
+  }
+ ],
+ "bildtext": "Statt einer Seite voller Unterschriften: ein Buch voller Gesichter 📸\n\nMit einem Druckpaket kommt jeder Ausdruck direkt ins Gästebuch, eingeklebt und mit einem Gruss beschriftet. Das Gästebuch kostet CHF 59, 100 Drucke ebenfalls CHF 59.\n\nSpeichert euch das für die Festplanung 👇\n👉 festbox.ch/anfrage\n\n#fotobox #fotoboxmieten #photobooth #gästebuch #hochzeitschweiz #zürcheroberland"
+}

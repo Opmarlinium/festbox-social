@@ -1,0 +1,52 @@
+{
+ "id": "2026-11-09-weihnachtsessen-gruende",
+ "format": "«Darum»-Liste (3 Gründe)",
+ "datum": "2026-11-09",
+ "zeit": "17:00",
+ "thema": "Weihnachtsessen",
+ "musik": "../../musik/party-upbeat-122bpm.mp3",
+ "logo": true,
+ "sound_kandidaten": [
+  "Last Christmas Wham!",
+  "It's Beginning to Look a Lot Like Christmas Michael Bublé",
+  "Feliz Navidad José Feliciano"
+ ],
+ "szenen": [
+  {
+   "clip": "../_clips/stock/xmas-lights-urielmont.mp4",
+   "start": 0,
+   "dauer": 2.3,
+   "oben": "Darum gehört eine *Fotobox* ans Weihnachtsessen",
+   "gross": "3 Gründe"
+  },
+  {
+   "bild": "firmenfeier-anstossen.webp",
+   "dauer": 2.2,
+   "bewegung": "zoom-in",
+   "marke": "Grund 1",
+   "klein": "Endlich ein Foto\nmit dem ganzen Team."
+  },
+  {
+   "bild": "layout-firmen-logo.webp",
+   "dauer": 2.2,
+   "bewegung": "pan-rechts",
+   "marke": "Grund 2",
+   "klein": "Euer Firmenlogo\nauf jedem Bild."
+  },
+  {
+   "bild": "freunde-anstossen.webp",
+   "dauer": 2.2,
+   "bewegung": "zoom-out",
+   "marke": "Grund 3",
+   "klein": "Alle Fotos per QR-Code\nsofort aufs Handy."
+  },
+  {
+   "clip": "../_clips/stock/xmas-lights-urielmont.mp4",
+   "start": 5,
+   "dauer": 2.5,
+   "oben": "Welcher Grund *überzeugt* euer Team?",
+   "unten": "👉 festbox.ch/anfrage"
+  }
+ ],
+ "bildtext": "Drei Gründe für die Fotobox, die ihr gleich ans OK eures Weihnachtsessens weiterleiten könnt 🎄\n\nEin Foto mit dem ganzen Team, euer Firmenlogo auf jedem Bild und alle Fotos per QR-Code direkt aufs Handy. Die Online-Galerie steht innert 48 Stunden.\n\nSchickt das der Person, die bei euch das Weihnachtsessen organisiert 👇\n👉 festbox.ch/anfrage\n\n#fotobox #fotoboxmieten #photobooth #weihnachtsessen #firmenanlass #zürcheroberland #zürich\n\nVideo: Uriel Mont / Pexels"
+}

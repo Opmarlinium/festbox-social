@@ -1,0 +1,57 @@
+{
+ "id": "2026-11-14-jga-checkliste-ig",
+ "format": "Checkliste zum Abhaken",
+ "datum": "2026-11-14",
+ "zeit": "13:00",
+ "thema": "Polterabend/JGA",
+ "logo": true,
+ "sound_kandidaten": [
+  "Girls Just Want to Have Fun Cyndi Lauper",
+  "Dancing Queen ABBA",
+  "Wannabe Spice Girls"
+ ],
+ "szenen": [
+  {
+   "bild": "jga-konfetti.webp",
+   "dauer": 2.0,
+   "bewegung": "zoom-in",
+   "oben": "*JGA*-Checkliste in 10 Sekunden"
+  },
+  {
+   "bild": "freundinnen-polizeimuetze.webp",
+   "dauer": 1.8,
+   "bewegung": "pan-rechts",
+   "marke": "✓ Requisiten",
+   "klein": "ab CHF 39"
+  },
+  {
+   "bild": "party-goldvorhang.webp",
+   "dauer": 1.8,
+   "bewegung": "zoom-out",
+   "marke": "✓ Hintergrund",
+   "klein": "ab CHF 149"
+  },
+  {
+   "bild": "gruppe-requisiten-sofa.webp",
+   "dauer": 1.8,
+   "bewegung": "pan-links",
+   "marke": "✓ Eigenes Layout",
+   "klein": "in jedem Paket dabei"
+  },
+  {
+   "bild": "freundinnen-sekt.webp",
+   "dauer": 1.8,
+   "bewegung": "zoom-in",
+   "marke": "✓ Drucke für alle",
+   "klein": "100 Stück für CHF 59"
+  },
+  {
+   "bild": "jga-konfetti.webp",
+   "dauer": 2.0,
+   "bewegung": "zoom-out",
+   "oben": "Was fehlt auf *eurer* Liste?",
+   "unten": "👉 festbox.ch/anfrage"
+  }
+ ],
+ "bildtext": "Polterabend oder JGA in Planung? Diese vier Punkte könnt ihr gleich abhaken ✅\n\nRequisiten gibt es ab CHF 39, einen Hintergrund ab CHF 149 und 100 Drucke für CHF 59. Ein eigenes Foto-Layout ist in jedem Paket dabei.\n\nSchickt die Liste in den Gruppenchat, der das Fest plant 👇\n👉 festbox.ch/anfrage\n\n#fotobox #fotoboxmieten #photobooth #jga #polterabend #zürcheroberland #zürich"
+}
