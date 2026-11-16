@@ -1,0 +1,80 @@
+{
+ "id": "2026-11-21-hochzeit-mythen-ig",
+ "format": "Mythos vs. Wahrheit (Hochzeit)",
+ "datum": "2026-11-21",
+ "zeit": "13:00",
+ "thema": "Hochzeit",
+ "stimme": "../../stimmen/2026-11-16-reel5.mp3",
+ "stimme_start": 0.2,
+ "musik_db": -18,
+ "logo": true,
+ "sound_kandidaten": [
+  "Perfect Ed Sheeran",
+  "A Thousand Years piano",
+  "Can't Help Falling in Love acoustic"
+ ],
+ "szenen": [
+  {
+   "bild": "hochzeit-gruppe.webp",
+   "bewegung": "zoom-in",
+   "oben": "2 Hochzeits-Mythen über *Fotoboxen*",
+   "marke": "Mythos",
+   "klein": "«Eine Fotobox passt nicht",
+   "dauer": 3.1
+  },
+  {
+   "bild": "hochzeit-blumenrahmen.webp",
+   "bewegung": "pan-links",
+   "marke": "Mythos",
+   "klein": "zu einer eleganten\nHochzeit.»",
+   "dauer": 1.96
+  },
+  {
+   "bild": "fotobox-wohnzimmer.webp",
+   "bewegung": "zoom-out",
+   "gross": "Wahrheit",
+   "dauer": 1.36
+  },
+  {
+   "bild": "layout-hochzeit-hochformat.webp",
+   "bewegung": "zoom-in",
+   "marke": "Wahrheit",
+   "klein": "Ein eigenes Layout\nmit *euren Namen*",
+   "dauer": 2.48
+  },
+  {
+   "bild": "layout-hochzeit-streifen.webp",
+   "bewegung": "pan-rechts",
+   "klein": "ist immer dabei.",
+   "dauer": 1.23
+  },
+  {
+   "bild": "hochzeit-sofortbilder-leiter.webp",
+   "bewegung": "zoom-out",
+   "marke": "Mythos",
+   "klein": "«Drucke sind teuer.»",
+   "dauer": 3.01
+  },
+  {
+   "bild": "fotostreifen-hand.webp",
+   "bewegung": "pan-links",
+   "gross": "Wahrheit",
+   "dauer": 1.32
+  },
+  {
+   "bild": "fotostreifen-hand.webp",
+   "bewegung": "zoom-in",
+   "gross": "CHF 59",
+   "klein": "für 100 Drucke",
+   "dauer": 3.06
+  },
+  {
+   "bild": "hochzeit-blumenrahmen.webp",
+   "bewegung": "zoom-in",
+   "oben": "Welchen Mythos kennt *ihr* noch?",
+   "unten": "👉 festbox.ch/anfrage",
+   "dauer": 2.2
+  }
+ ],
+ "bildtext": "Passt eine Fotobox überhaupt an eine elegante Hochzeit? 💍\n\nZwei Mythen, zwei Antworten: Euer eigenes Foto-Layout mit euren Namen ist in jedem Paket dabei. Und Drucke zum Mitnehmen gibt es ab CHF 59 für 100 Stück.\n\nWelchen Fotobox-Mythos habt ihr schon gehört? Schreibt ihn in die Kommentare 👇\n👉 festbox.ch/anfrage\n\n#fotobox #fotoboxmieten #photobooth #zürcheroberland #zürich #hochzeitschweiz"
+}

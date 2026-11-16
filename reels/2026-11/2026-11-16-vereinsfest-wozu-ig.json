@@ -1,0 +1,69 @@
+{
+ "id": "2026-11-16-vereinsfest-wozu-ig",
+ "format": "Frage, dann Beweis (Trend)",
+ "datum": "2026-11-16",
+ "zeit": "17:00",
+ "thema": "Vereinsfest",
+ "stimme": "../../stimmen/2026-11-16-reel1.mp3",
+ "stimme_start": 0.2,
+ "musik_db": -18,
+ "logo": true,
+ "sound_kandidaten": [
+  "Celebration Kool & The Gang",
+  "Happy Pharrell Williams",
+  "Good Vibes"
+ ],
+ "szenen": [
+  {
+   "bild": "firmen-gruppe-jubel.webp",
+   "bewegung": "zoom-in",
+   "oben": "Fotobox am Vereinsfest? *Wozu* eigentlich?",
+   "dauer": 2.28
+  },
+  {
+   "bild": "freunde-anstossen.webp",
+   "bewegung": "pan-rechts",
+   "oben": "Fotobox am Vereinsfest? *Wozu* eigentlich?",
+   "dauer": 1.49
+  },
+  {
+   "bild": "freunde-bar.webp",
+   "bewegung": "zoom-out",
+   "klein": "Ganz einfach:",
+   "dauer": 1.37
+  },
+  {
+   "bild": "gruppe-jubel.webp",
+   "bewegung": "pan-links",
+   "klein": "Endlich steht der ganze Verein\nauf *einem* Bild.",
+   "dauer": 2.71
+  },
+  {
+   "bild": "layout-firmen-logo.webp",
+   "bewegung": "zoom-in",
+   "marke": "Euer Logo",
+   "klein": "Mit eurem Logo\nim Foto-Layout.",
+   "dauer": 2.02
+  },
+  {
+   "bild": "firmen-gruppe-jubel.webp",
+   "bewegung": "zoom-out",
+   "klein": "Und jeder holt sich\nsein Foto",
+   "dauer": 1.99
+  },
+  {
+   "bild": "freunde-bar.webp",
+   "bewegung": "pan-rechts",
+   "klein": "per *QR-Code*\naufs Handy.",
+   "dauer": 1.58
+  },
+  {
+   "bild": "gruppe-jubel.webp",
+   "bewegung": "zoom-in",
+   "oben": "Was feiert *euer* Verein?",
+   "unten": "👉 festbox.ch/anfrage",
+   "dauer": 2.0
+  }
+ ],
+ "bildtext": "Braucht es am Vereinsfest wirklich eine Fotobox? 🤔\n\nWir finden: ja. Weil so endlich alle Mitglieder auf demselben Bild sind. Mit eurem Vereinslogo im Foto-Layout, und per QR-Code hat jedes Mitglied sein Foto auf dem Handy.\n\nWelches Fest steht bei eurem Verein als Nächstes an? Schreibt's in die Kommentare 👇\n👉 festbox.ch/anfrage\n\n#fotobox #fotoboxmieten #photobooth #zürcheroberland #zürich #vereinsfest"
+}

@@ -1,0 +1,64 @@
+{
+ "id": "2026-11-20-party-fehlt-noch",
+ "format": "Produkt-Demo mit Stimme (Trend DACH)",
+ "datum": "2026-11-20",
+ "zeit": "13:00",
+ "thema": "Stimmung/Party",
+ "musik": "../../musik/party-upbeat-122bpm.mp3",
+ "stimme": "../../stimmen/2026-11-16-reel4.mp3",
+ "stimme_start": 0.2,
+ "musik_db": -18,
+ "logo": true,
+ "sound_kandidaten": [
+  "Don't Start Now Dua Lipa",
+  "Cake By The Ocean DNCE",
+  "Dynamite BTS"
+ ],
+ "szenen": [
+  {
+   "clip": "../_clips/stock/confetti-hannapad.mp4",
+   "start": 0,
+   "oben": "Das fehlt an eurer Party *noch*",
+   "dauer": 2.07
+  },
+  {
+   "bild": "party-huete-silbervorhang.webp",
+   "bewegung": "zoom-in",
+   "klein": "Requisiten schnappen,",
+   "dauer": 1.33
+  },
+  {
+   "bild": "fotobox-nahaufnahme.webp",
+   "bewegung": "pan-links",
+   "klein": "vor die Box stellen,",
+   "dauer": 1.22
+  },
+  {
+   "bild": "freundinnen-sekt.webp",
+   "bewegung": "zoom-out",
+   "gross": "Lächeln!",
+   "dauer": 1.08
+  },
+  {
+   "bild": "hero-gruppe-party.webp",
+   "bewegung": "pan-rechts",
+   "marke": "QR-Code",
+   "klein": "Dann den QR-Code scannen,",
+   "dauer": 1.75
+  },
+  {
+   "bild": "party-huete-silbervorhang.webp",
+   "bewegung": "zoom-out",
+   "klein": "und das Foto ist\n*auf dem Handy.*",
+   "dauer": 1.74
+  },
+  {
+   "clip": "../_clips/stock/confetti-hannapad.mp4",
+   "start": 5,
+   "oben": "Was fehlt bei *euch* noch?",
+   "unten": "👉 festbox.ch/anfrage",
+   "dauer": 2.2
+  }
+ ],
+ "bildtext": "Eure Party hat Musik, Drinks und gute Leute. Und sonst? 🎉\n\nRequisiten schnappen, vor die Box stellen, lächeln. Dann den QR-Code scannen, und das Foto ist auf dem Handy. Mehr braucht es nicht.\n\nWas darf an eurer Party nie fehlen? Ab in die Kommentare 👇\n👉 festbox.ch/anfrage\n\n#fotobox #fotoboxmieten #photobooth #zürcheroberland #zürich #party\n\nVideo Konfetti: Hanna Pad / Pexels"
+}

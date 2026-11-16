@@ -1,0 +1,71 @@
+{
+ "id": "2026-11-18-geburi-vertrau-mir-ig",
+ "format": "«Vertrau mir»-Empfehlung (Trend)",
+ "datum": "2026-11-18",
+ "zeit": "16:00",
+ "thema": "Geburtstag",
+ "stimme": "../../stimmen/2026-11-16-reel2.mp3",
+ "stimme_start": 0.2,
+ "musik_db": -18,
+ "logo": true,
+ "sound_kandidaten": [
+  "Levitating Dua Lipa",
+  "Dance The Night Dua Lipa",
+  "Birthday Katy Perry"
+ ],
+ "szenen": [
+  {
+   "bild": "geburtstag-gelb-requisiten.webp",
+   "bewegung": "zoom-in",
+   "oben": "Vertrau mir: Deine Gäste werden *das* lieben",
+   "klein": "Du planst deinen *Geburi?*",
+   "dauer": 1.81
+  },
+  {
+   "bild": "freundinnen-partyhuete.webp",
+   "bewegung": "pan-links",
+   "oben": "Vertrau mir: Deine Gäste werden *das* lieben",
+   "klein": "Stell eine Fotobox hin.",
+   "dauer": 2.9
+  },
+  {
+   "bild": "gast-partyhut.webp",
+   "bewegung": "zoom-out",
+   "gross": "Hüte auf",
+   "dauer": 1.0
+  },
+  {
+   "bild": "kostuemparty.webp",
+   "bewegung": "zoom-in",
+   "gross": "Brillen auf",
+   "dauer": 0.94
+  },
+  {
+   "bild": "paar-geburtstag.webp",
+   "bewegung": "pan-rechts",
+   "gross": "Lachen!",
+   "dauer": 1.1
+  },
+  {
+   "bild": "freundinnen-partyhuete.webp",
+   "bewegung": "zoom-out",
+   "marke": "Unlimitiert",
+   "klein": "Die Fotos sind unlimitiert,",
+   "dauer": 1.85
+  },
+  {
+   "bild": "geburtstag-gelb-requisiten.webp",
+   "bewegung": "pan-links",
+   "klein": "also darf's auch\ndas *zwanzigste* Bild sein.",
+   "dauer": 2.15
+  },
+  {
+   "bild": "gast-partyhut.webp",
+   "bewegung": "zoom-in",
+   "oben": "Wen nehmt *ihr* mit in die Box?",
+   "unten": "👉 festbox.ch/anfrage",
+   "dauer": 2.0
+  }
+ ],
+ "bildtext": "Plant ihr gerade einen Geburi? Dann hört auf mich. 🎈\n\nStellt eine Fotobox hin: Hüte auf, Brillen auf, und los. Die digitalen Fotos sind unlimitiert, also hört niemand nach dem ersten Bild auf.\n\nMarkiert die Person, die als Erste vor der Box steht.\n👉 festbox.ch/anfrage\n\n#fotobox #fotoboxmieten #photobooth #zürcheroberland #zürich #geburtstag"
+}

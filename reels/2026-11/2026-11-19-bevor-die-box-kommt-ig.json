@@ -1,0 +1,66 @@
+{
+ "id": "2026-11-19-bevor-die-box-kommt-ig",
+ "format": "Hinter den Kulissen (Ablauf mit Team)",
+ "datum": "2026-11-19",
+ "zeit": "18:00",
+ "thema": "Ablauf/Team",
+ "stimme": "../../stimmen/2026-11-16-reel3.mp3",
+ "stimme_start": 0.2,
+ "musik_db": -18,
+ "logo": true,
+ "sound_kandidaten": [
+  "Sunroof Nicky Youre",
+  "Good Day Surfaces",
+  "Walking on Sunshine Katrina and the Waves"
+ ],
+ "szenen": [
+  {
+   "bild": "team-marlin.webp",
+   "bewegung": "zoom-in",
+   "oben": "Das passiert, *bevor* die Box bei euch steht",
+   "dauer": 2.84
+  },
+  {
+   "bild": "team-anil.webp",
+   "bewegung": "pan-links",
+   "marke": "Schritt 1",
+   "klein": "Ihr fragt an,\nund die Offerte kommt",
+   "dauer": 1.66
+  },
+  {
+   "bild": "hero-fotobox-1200.webp",
+   "bewegung": "zoom-out",
+   "gross": "24 h",
+   "klein": "innert 24 Stunden.",
+   "dauer": 1.97
+  },
+  {
+   "bild": "layout-hochzeit-querformat.webp",
+   "bewegung": "zoom-in",
+   "marke": "Schritt 2",
+   "klein": "Wir gestalten\neuer Foto-Layout.",
+   "dauer": 2.87
+  },
+  {
+   "bild": "fotobox-aufgebaut.webp",
+   "bewegung": "pan-rechts",
+   "marke": "Schritt 3",
+   "klein": "Mit Paket M",
+   "dauer": 1.46
+  },
+  {
+   "bild": "fotobox-festbox-stativ-softbox-1440.webp",
+   "bewegung": "zoom-in",
+   "klein": "liefern wir\ndie Box zu euch.",
+   "dauer": 1.44
+  },
+  {
+   "bild": "team-marlin.webp",
+   "bewegung": "zoom-out",
+   "oben": "Wann steht die Box *bei euch?*",
+   "unten": "👉 festbox.ch/anfrage",
+   "dauer": 2.0
+  }
+ ],
+ "bildtext": "Was passiert eigentlich zwischen eurer Anfrage und dem Fest? 👀\n\nIhr fragt an, und innert 24 Stunden habt ihr die Offerte. Bezahlt wird erst, wenn ihr sie annehmt. Dann gestalten wir euer eigenes Foto-Layout, und mit Paket M liefern wir die Box zu euch. Die Anfahrt bis 20 km ab Bahnhof Wetzikon ist inklusive.\n\nSpeichert euch das für die Planung.\n👉 festbox.ch/anfrage\n\n#fotobox #fotoboxmieten #photobooth #zürcheroberland #zürich #wetzikon"
+}
