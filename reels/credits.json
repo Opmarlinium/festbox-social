@@ -60,6 +60,24 @@
       "werkzeug": "keine Stimme",
       "credits": 0,
       "zweck": "Guthaben 51 vor Reel-Teil, Reset 19.11., 30 für 16.11. reserviert. voiceover_generate kostet neu 28 pro 1000 Zeichen, passt nicht ins Budget. Reels ohne Stimme. Stand danach 45."
+    },
+    {
+      "datum": "2026-11-16",
+      "werkzeug": "vidiq_instagram_tiktok_outlier_search",
+      "credits": 5,
+      "zweck": "Reel-Recherche Woche ab 16.11."
+    },
+    {
+      "datum": "2026-11-16",
+      "werkzeug": "vidiq_voiceover_generate",
+      "credits": 28,
+      "zweck": "Sammel-Stimme Sarah, 892 Zeichen, 5 Teile (scriptLines), in allen 5 Reels verwendet"
+    },
+    {
+      "datum": "2026-11-16",
+      "werkzeug": "vidiq_find_broll",
+      "credits": 1,
+      "zweck": "Stock Konfetti (Pexels, Hanna Pad) für Party-Reel. Guthaben vor Reel-Teil 35, Reset 19.11. (kein Montag mehr davor), danach 1"
     }
   ]
 }
