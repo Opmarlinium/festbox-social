@@ -1,0 +1,139 @@
+{
+  "posts": [
+    {
+      "id": "post-2026-11-16-weihnachtsessen",
+      "layout": "panel",
+      "bild": "firmenfeier-anstossen.webp",
+      "bildposition": "50% 55%",
+      "polaroid": "layout-firmen-logo.webp",
+      "polaroid_text": "Mit eurem Logo",
+      "tag": "Weihnachtsessen",
+      "titel": "Den Chef gezogen? *Ab in die Box.*",
+      "text": "Ein gemeinsames Foto ist das einfachste Wichtelgeschenk.",
+      "fuss": [
+        "festbox.ch",
+        "Mit eurem Firmenlogo"
+      ]
+    },
+    {
+      "id": "post-2026-11-17-ablauf",
+      "layout": "schritte",
+      "titel": "Drei Fragen *vor dem Buchen.*",
+      "schritte": [
+        {
+          "titel": "Wann zahlen wir?",
+          "text": "Erst wenn ihr die Offerte annehmt. Die kommt innert 24 Stunden."
+        },
+        {
+          "titel": "Kostet die Anfahrt?",
+          "text": "Bis 20 km Luftlinie ab Bahnhof Wetzikon ist sie inklusive."
+        },
+        {
+          "titel": "Wann sind die Fotos da?",
+          "text": "Sofort per QR-Code aufs Handy, die Online-Galerie innert 48 h."
+        }
+      ],
+      "fuss": [
+        "festbox.ch/anfrage",
+        "So funktioniert's"
+      ]
+    },
+    {
+      "id": "post-2026-11-18-hochzeit",
+      "layout": "zitat",
+      "titel": "Das Gastgeschenk machen die *Gäste selber.*",
+      "text": "Ein Foto aus der Box, gedruckt zum Mitnehmen. 100 Drucke gibt's für CHF 59 dazu.",
+      "bild": "hochzeit-sofortbilder-leiter.webp",
+      "bildposition": "50% 70%",
+      "fuss": [
+        "festbox.ch",
+        "Hochzeit"
+      ]
+    },
+    {
+      "id": "post-2026-11-19-pakete",
+      "layout": "liste",
+      "titel": "Was bei uns\n*nie extra kostet.*",
+      "zeilen": [
+        {
+          "kurz": "∞",
+          "titel": "Unlimitierte Fotos",
+          "text": "So viele Bilder, wie ihr wollt",
+          "wert": "inkl.",
+          "einheit": "immer"
+        },
+        {
+          "kurz": "QR",
+          "titel": "Download aufs Handy",
+          "text": "Code scannen, Foto ist da",
+          "wert": "inkl.",
+          "einheit": "immer",
+          "hervorheben": true
+        },
+        {
+          "kurz": "Aa",
+          "titel": "Eigenes Foto-Layout",
+          "text": "Mit Firmenlogo oder Namen des Brautpaars",
+          "wert": "inkl.",
+          "einheit": "immer"
+        }
+      ],
+      "text": "Dazu die Online-Galerie innert 48 h. In jedem Paket.",
+      "fuss": [
+        "festbox.ch/anfrage",
+        "Offerte innert 24 h"
+      ]
+    },
+    {
+      "id": "post-2026-11-20-party",
+      "layout": "foto",
+      "bild": "gruppe-requisiten-sofa.webp",
+      "bildposition": "50% 40%",
+      "tag": "Fiirabig",
+      "titel": "Gestellt war nur\n*der erste Versuch.*",
+      "text": "Beim zweiten Foto lacht schon die Hälfte. Beim dritten alle.",
+      "fuss": [
+        "festbox.ch",
+        "Zürcher Oberland"
+      ]
+    },
+    {
+      "id": "post-2026-11-21-jga",
+      "layout": "panel",
+      "bild": "jga-konfetti.webp",
+      "bildposition": "50% 40%",
+      "polaroid": "sofortbild-requisite.webp",
+      "polaroid_text": "Beweisfoto 📸",
+      "tag": "Polterabend / JGA",
+      "titel": "Was am JGA passiert, *bleibt.*",
+      "text": "In der Online-Galerie und per QR-Code auf jedem Handy der Truppe.",
+      "fuss": [
+        "festbox.ch",
+        "Zürcher Oberland"
+      ]
+    },
+    {
+      "id": "post-2026-11-22-silvester",
+      "layout": "schritte",
+      "titel": "Silvester-Plan *in drei Zeilen.*",
+      "schritte": [
+        {
+          "titel": "Datum anfragen",
+          "text": "Auf festbox.ch/anfrage, die Offerte kommt innert 24 Stunden."
+        },
+        {
+          "titel": "Layout mit 2027",
+          "text": "Euer eigenes Foto-Layout ist in jedem Paket dabei."
+        },
+        {
+          "titel": "Drucke dazunehmen",
+          "text": "100 Drucke für CHF 59, damit jeder ein Foto mitnimmt."
+        }
+      ],
+      "fuss": [
+        "festbox.ch",
+        "Silvester 2026"
+      ]
+    }
+  ]
+}
